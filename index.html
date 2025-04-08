@@ -1,26 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="assets/styles/main.css">
+  <meta charset="UTF-8" />
+  <title>Dearly Said | Forever Kept</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #fdfcfc;
+      color: #3a2e2e;
+      margin: 0;
+      padding: 0;
+    }
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+    }
+    nav {
+      position: sticky;
+      top: 0;
+      background: white;
+      border-bottom: 1px solid #ddd;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem 0;
+      z-index: 999;
+    }
+    nav a {
+      color: #9c6e6e;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    button {
+      background: #9c6e6e;
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background: #7d5858;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #f8eeee;
+      margin-top: 4rem;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
-    <main>
-        <h1>Welcome to Our Website</h1>
-        <p>Explore our services and get to know more about us.</p>
-    </main>
-    <footer>
-        <p>&copy; 2025 Your Company Name. All rights reserved.</p>
-    </footer>
+
+<header style="text-align: center; padding: 3rem 2rem 1rem;">
+  <img src="https://cdn-icons-png.flaticon.com/512/1077/1077035.png" alt="Dearly Said Logo" style="max-width: 100px; margin-bottom: 1rem;">
+  <h1>Dearly Said, Forever Kept</h1>
+  <p style="font-size: 1.2rem; color: #7d5858;">Capture the moment. Share the memory. Scan the love.</p>
+</header>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="shop.html">Shop</a>
+  <a href="how-it-works.html">How It Works</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<section style="background: url('https://images.unsplash.com/photo-1587574293340-ec9a5d704f18?auto=format&fit=crop&w=1500&q=80') center/cover no-repeat; height: 60vh; display: flex; align-items: center; justify-content: center; color: white; text-align: center; padding: 2rem;">
+  <h2 style="font-size: 2.5rem; background: rgba(0, 0, 0, 0.6); padding: 1rem 2rem; border-radius: 8px; max-width: 800px;">Turn your words into forever keepsakes with QR-coded cards for love, family, and celebration.</h2>
+</section>
+
+<section style="max-width: 1000px; margin: 3rem auto; padding: 0 2rem; text-align: center;">
+  <h2>What is a QR Greeting Card?</h2>
+  <p style="font-size: 1.1rem;">It’s more than a card — it’s a moment, a memory, and a message you can replay forever. Our beautifully designed greeting cards include scannable QR codes that link to personalized videos or voice notes. Perfect for weddings, birthdays, anniversaries, or just because.</p>
+</section>
+
+<section style="text-align: center; margin: 3rem 0;">
+  <h2>Mother’s Day is Coming!</h2>
+  <p style="font-size: 1.2rem; color: #9c6e6e;">Order by <strong>May 6</strong> to guarantee delivery in time for Mother’s Day ❤️</p>
+  <p style="font-size: 1.5rem; font-weight: bold;" id="countdown-timer"></p>
+</section>
+
+<script>
+  const countdownDate = new Date("May 12, 2025 00:00:00").getTime();
+  const x = setInterval(function () {
+    const now = new Date().getTime();
+    const distance = countdownDate - now;
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    document.getElementById("countdown-timer").innerHTML = days > 0 ? days + " days left!" : "Today is the day!";
+    if (distance < 0) clearInterval(x);
+  }, 1000);
+</script>
+
+<section style="background: linear-gradient(90deg, #ffe6e6, #fff2f2); padding: 2rem; text-align: center;">
+  <h2 style="margin-bottom: 0.5rem;">🎁 Limited Time Offer</h2>
+  <p style="font-size: 1.1rem; max-width: 700px; margin: 0 auto;">Buy any 2 cards, get 1 free — no code needed. Perfect for Mother’s Day, weddings, or surprising your sweetheart. Discount applies automatically at checkout!</p>
+</section>
+
+<section style="max-width: 900px; margin: 4rem auto; text-align: center;">
+  <h2>See a Card in Action</h2>
+  <p style="margin-bottom: 1rem;">Watch how our QR message cards turn your voice into a cherished keepsake.</p>
+  <video width="100%" height="480" controls poster="https://images.unsplash.com/photo-1617957745413-471c55e72b64?auto=format&fit=crop&w=800&q=80">
+    <source src="https://dearlysaid.s3.amazonaws.com/demo-card-preview.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</section>
+
+<section style="max-width: 1000px; margin: 5rem auto;">
+  <h2 style="text-align: center;">FAQs</h2>
+  <details style="margin-bottom: 1rem;">
+    <summary><strong>What kind of messages can I upload?</strong></summary>
+    <p>You can upload voice notes, video clips, or even a slideshow — anything that creates a meaningful moment.</p>
+  </details>
+  <details style="margin-bottom: 1rem;">
+    <summary><strong>Can I preview the card before printing?</strong></summary>
+    <p>Yes, you’ll receive a digital proof for approval before anything is shipped or finalized.</p>
+  </details>
+  <details style="margin-bottom: 1rem;">
+    <summary><strong>Do the cards expire?</strong></summary>
+    <p>No! The QR codes link to cloud-hosted content that lasts forever — or until you decide to remove it.</p>
+  </details>
+</section>
+
+<footer>
+  <p>© 2025 Dearly Said — Forever Kept.</p>
+</footer>
+
 </body>
 </html>
