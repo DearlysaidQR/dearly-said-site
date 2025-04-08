@@ -12,6 +12,16 @@
       color: #3a2e2e;
       text-align: center;
     }
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+    p {
+      font-size: 1.1rem;
+    }
+    form {
+      margin-top: 2rem;
+    }
     input, textarea {
       display: block;
       margin: 0.5rem auto;
@@ -30,6 +40,10 @@
       font-weight: bold;
       border-radius: 6px;
       cursor: pointer;
+      margin-top: 1rem;
+    }
+    button:hover {
+      background: #7d5858;
     }
     a {
       display: inline-block;
@@ -40,16 +54,3 @@
     }
   </style>
 </head>
-<body>
-  <h1>Contact Us</h1>
-  <p>Questions, custom orders, or just want to say hi? Reach out below!</p>
-  <form action="https://formspree.io/f/xkgjpavb" method="POST">
-    <input type="hidden" name="_captcha" value="false">
-    <input type="text" name="name" placeholder="Your Name" required />
-    <input type="email" name="email" placeholder="Your Email" required />
-    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-    <button type="submit">Send</button>
-  </form>
-  <a href="index.html">← Back to Home</a>
-</body>
-</html>
