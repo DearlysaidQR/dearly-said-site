@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dearly Said</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body style="margin: 0; font-family: sans-serif; background: #fdfcfc; color: #3a2e2e;">
+
+<header style="text-align: center; padding: 3rem 2rem 1rem; background: #fff;">
+  <img src="https://cdn-icons-png.flaticon.com/512/1077/1077035.png" alt="Dearly Said Logo" style="max-width: 120px; margin-bottom: 1rem;">
+  <h1 style="font-family: 'Playfair Display', serif; font-size: 3.2rem; color: #3a2e2e; margin: 0;">Dearly Said, Forever Kept</h1>
+  <p style="font-size: 1.2rem; color: #7d5858;">Capture the moment. Share the memory. Scan the love.</p>
+</header>
+
+<nav style="background-color: #ffffff; display: flex; justify-content: center; gap: 2.5rem; padding: 1rem 0; border-bottom: 1px solid #ddd;">
+  <a href="#shop" style="color: #2c2c2c; text-decoration: none; font-weight: 700; font-size: 1rem;">Shop</a>
+  <a href="#how-it-works" style="color: #2c2c2c; text-decoration: none; font-weight: 700; font-size: 1rem;">How It Works</a>
+  <a href="#contact" style="color: #2c2c2c; text-decoration: none; font-weight: 700; font-size: 1rem;">Contact</a>
+</nav>
+
+<div class="hero" style="background: url('https://images.unsplash.com/photo-1587574293340-ec9a5d704f18?auto=format&fit=crop&w=1500&q=80') center/cover no-repeat; height: 60vh; display: flex; align-items: center; justify-content: center; color: white; text-align: center; padding: 2rem;">
+  <h2 style="font-size: 2.5rem; background: rgba(0, 0, 0, 0.6); padding: 1rem 2rem; border-radius: 8px; max-width: 800px;">Turn your words into forever keepsakes with QR-coded cards for love, family, and celebration.</h2>
+</div>
+
+<section class="intro" style="max-width: 1000px; margin: 3rem auto; padding: 0 2rem; text-align: center;">
+  <h2 style="font-family: 'Playfair Display', serif; font-size: 2rem; margin-bottom: 1rem;">What is a QR Greeting Card?</h2>
+  <p style="font-size: 1.1rem; color: #444;">It’s more than a card — it’s a moment, a memory, and a message you can replay forever. Our beautifully designed greeting cards include scannable QR codes that link to personalized videos or voice notes. Perfect for weddings, birthdays, anniversaries, or just because.</p>
+</section>
+
+<section class="countdown">
+  <h2 style="text-align:center; margin-top: 3rem;">Mother’s Day is Coming!</h2>
+  <p style="text-align:center; font-size: 1.2rem; color: #9c6e6e;">Order by <strong>May 6</strong> to guarantee delivery in time for Mother’s Day ❤️</p>
+  <script>
+    const countdownDate = new Date("May 12, 2025 00:00:00").getTime();
+    const x = setInterval(function () {
+      const now = new Date().getTime();
+      const distance = countdownDate - now;
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      document.getElementById("countdown-timer").innerHTML = days > 0 ? days + " days left!" : "Today is the day!";
+      if (distance < 0) clearInterval(x);
+    }, 1000);
+  </script>
+  <p style="text-align:center; font-size: 1.5rem; font-weight: bold; color: #3a2e2e;" id="countdown-timer"></p>
+</section>
+
+<section class="promo-banner" style="background: linear-gradient(90deg, #ffe6e6, #fff2f2); padding: 2rem; text-align: center;">
+  <h2 style="margin-bottom: 0.5rem; font-size: 2rem;">🎁 Limited Time Offer</h2>
+  <p style="font-size: 1.1rem; max-width: 700px; margin: 0 auto;">Buy any 2 cards, get 1 free — no code needed. Perfect for Mother’s Day, weddings, or surprising your sweetheart. Discount applies automatically at checkout!</p>
+</section>
+
+<section class="video-demo" style="max-width: 900px; margin: 4rem auto; text-align: center;">
+  <h2>See a Card in Action</h2>
+  <p style="margin-bottom: 1rem;">Watch how our QR message cards turn your voice into a cherished keepsake.</p>
+  <video width="100%" height="480" controls poster="https://images.unsplash.com/photo-1617957745413-471c55e72b64?auto=format&fit=crop&w=800&q=80">
+    <source src="https://dearlysaid.s3.amazonaws.com/demo-card-preview.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</section>
+
+<section class="steps" style="max-width: 1100px; margin: 5rem auto; text-align: center;">
+  <h2>How It Works</h2>
+  <div style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center;">
+    <div style="flex: 1 1 250px; background: #fff; padding: 1rem; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); transition: transform 0.3s;">
+      <img src="https://cdn-icons-png.flaticon.com/512/709/709496.png" alt="Choose Design" style="width: 50px; margin-bottom: 1rem;">
+      <h3 style="font-family: 'Playfair Display'; font-size: 1.3rem;">1. Choose Your Design</h3>
+      <p>Select from romantic, funny, or family-themed collections.</p>
+    </div>
+    <div style="flex: 1 1 250px; background: #fff; padding: 1rem; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); transition: transform 0.3s;">
+      <img src="https://cdn-icons-png.flaticon.com/512/927/927567.png" alt="Upload Message" style="width: 50px; margin-bottom: 1rem;">
+      <h3 style="font-family: 'Playfair Display'; font-size: 1.3rem;">2. Add Your Message</h3>
+      <p>Upload a video or voice clip for us to embed into a scannable QR.</p>
+    </div>
+    <div style="flex: 1 1 250px; background: #fff; padding: 1rem; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); transition: transform 0.3s;">
+      <img src="https://cdn-icons-png.flaticon.com/512/709/709612.png" alt="Get Your Card" style="width: 50px; margin-bottom: 1rem;">
+      <h3 style="font-family: 'Playfair Display'; font-size: 1.3rem;">3. Share the Magic</h3>
+      <p>We’ll deliver a card with your custom QR — printable or mailed!</p>
+    </div>
+  </div>
+</section>
+
+<a href="#shop" style="position: fixed; bottom: 20px; right: 20px; background: #9c6e6e; color: white; padding: 0.8rem 1.4rem; border-radius: 6px; text-decoration: none; font-weight: bold; box-shadow: 0 2px 10px rgba(0,0,0,0.1); z-index: 999;">🛍️ Shop Now</a>
+
+<section class="faq" style="max-width: 1000px; margin: 5rem auto;">
+  <h2 style="text-align: center;">FAQs</h2>
+  <details style="margin-bottom: 1rem;">
+    <summary style="font-weight: bold; cursor: pointer;">What kind of messages can I upload?</summary>
+    <p>You can upload voice notes, video clips, or even a slideshow — anything that creates a meaningful moment.</p>
+  </details>
+  <details style="margin-bottom: 1rem;">
+    <summary style="font-weight: bold; cursor: pointer;">Can I preview the card before printing?</summary>
+    <p>Yes, you’ll receive a digital proof for approval before anything is shipped or finalized.</p>
+  </details>
+  <details style="margin-bottom: 1rem;">
+    <summary style="font-weight: bold; cursor: pointer;">Do the cards expire?</summary>
+    <p>No! The QR codes link to cloud-hosted content that lasts forever — or until you decide to remove it.</p>
+  </details>
+</section>
+
+</body>
+</html>
