@@ -3,26 +3,76 @@
 <head>
   <meta charset="UTF-8" />
   <title>Shop | Dearly Said</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: sans-serif;
-      margin: 0;
-      padding: 2rem;
-      background-color: #fdfcfc;
+      font-family: 'Inter', sans-serif;
+      background: #fdfcfc;
       color: #3a2e2e;
+      margin: 0;
+      padding: 0;
       text-align: center;
     }
-    a {
-      text-decoration: none;
+    h1, h2 {
+      font-family: 'Playfair Display', serif;
+    }
+    nav {
+      position: sticky;
+      top: 0;
+      background: white;
+      border-bottom: 1px solid #ddd;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem 0;
+      z-index: 999;
+    }
+    nav a {
       color: #9c6e6e;
-      font-weight: bold;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    section {
+      max-width: 800px;
+      margin: 4rem auto;
+      padding: 0 2rem;
+    }
+    .coming-soon {
+      font-size: 1.1rem;
+      color: #7d5858;
+      margin-top: 1rem;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #f8eeee;
+      margin-top: 4rem;
+      font-size: 0.9rem;
     }
   </style>
 </head>
 <body>
-  <h1>Shop Our Cards</h1>
-  <p>Our lovingly designed QR cards are available for every occasion.</p>
-  <p><em>Coming soon: full Etsy integration and catalog!</em></p>
-  <p><a href="index.html">← Back to Home</a></p>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="shop.html">Shop</a>
+  <a href="how-it-works.html">How It Works</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<section>
+  <h1>Shop Our QR Greeting Cards</h1>
+  <p class="coming-soon">Our full product collection is launching soon! Stay tuned for romantic, funny, and custom card designs — just in time for Mother’s Day 💌</p>
+  <p style="margin-top: 2rem;"><a href="contact.html" style="font-weight: bold;">Want a custom order? Contact us!</a></p>
+</section>
+
+<footer>
+  <p>© 2025 Dearly Said — Forever Kept.</p>
+</footer>
+
 </body>
 </html>
