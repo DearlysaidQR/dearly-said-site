@@ -12,7 +12,19 @@
       color: #3a2e2e;
       text-align: center;
     }
+    ol {
+      text-align: left;
+      max-width: 600px;
+      margin: 2rem auto;
+      padding-left: 1.5rem;
+    }
+    li {
+      margin-bottom: 1.2rem;
+      line-height: 1.6;
+    }
     a {
+      display: inline-block;
+      margin-top: 2rem;
       text-decoration: none;
       color: #9c6e6e;
       font-weight: bold;
@@ -21,11 +33,13 @@
 </head>
 <body>
   <h1>How It Works</h1>
-  <ol style="text-align: left; max-width: 600px; margin: 2rem auto;">
-    <li><strong>Choose your card design</strong>: romantic, funny, sentimental — whatever fits your vibe.</li>
-    <li><strong>Upload your message</strong>: record a voice note or video that we embed into a QR code.</li>
-    <li><strong>We deliver the magic</strong>: your card arrives with a scannable code that plays your message!</li>
+  <p>Our QR-coded keepsakes are as easy as 1, 2, 3.</p>
+  <ol>
+    <li><strong>Choose your card design</strong> — romantic, funny, or sentimental collections for every occasion.</li>
+    <li><strong>Upload your message</strong> — record a voice note or video, and we embed it into a custom QR code.</li>
+    <li><strong>We deliver the magic</strong> — your personalized card is printed, packaged, and shipped with love.</li>
   </ol>
-  <p><a href="index.html">← Back to Home</a></p>
+  <a href="index.html">← Back to Home</a>
 </body>
 </html>
+
