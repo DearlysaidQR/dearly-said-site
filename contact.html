@@ -3,31 +3,53 @@
 <head>
   <meta charset="UTF-8" />
   <title>Contact | Dearly Said</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: sans-serif;
-      margin: 0;
-      padding: 2rem;
-      background-color: #fdfcfc;
+      font-family: 'Inter', sans-serif;
+      background: #fdfcfc;
       color: #3a2e2e;
+      margin: 0;
+      padding: 0;
       text-align: center;
     }
     h1 {
-      font-size: 2rem;
-      margin-bottom: 0.5rem;
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      margin-top: 3rem;
     }
     p {
       font-size: 1.1rem;
     }
+    nav {
+      position: sticky;
+      top: 0;
+      background: white;
+      border-bottom: 1px solid #ddd;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem 0;
+      z-index: 999;
+    }
+    nav a {
+      color: #9c6e6e;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
     form {
-      margin-top: 2rem;
+      margin: 2rem auto;
+      max-width: 500px;
+      padding: 1rem;
     }
     input, textarea {
-      display: block;
-      margin: 0.5rem auto;
-      width: 90%;
-      max-width: 400px;
-      padding: 0.7rem;
+      width: 100%;
+      padding: 0.8rem;
+      margin: 0.5rem 0;
       font-size: 1rem;
       border: 1px solid #ccc;
       border-radius: 6px;
@@ -36,17 +58,50 @@
       background: #9c6e6e;
       color: white;
       border: none;
-      padding: 0.7rem 1.5rem;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
       font-weight: bold;
-      border-radius: 6px;
       cursor: pointer;
-      margin-top: 1rem;
+      transition: background 0.3s;
     }
     button:hover {
       background: #7d5858;
     }
-    a {
-      display: inline-block;
-      margin-top: 2rem;
-      text-decoration: none;
-      color: #9c
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #f8eeee;
+      margin-top: 4rem;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="shop.html">Shop</a>
+  <a href="how-it-works.html">How It Works</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<h1>Contact Us</h1>
+<p>Questions, custom orders, or just want to say hi? Reach out below!</p>
+
+<form action="https://formspree.io/f/xkgjpavb" method="POST">
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_next" value="https://dearlysaid.netlify.app/thank-you.html">
+  
+  <input type="text" name="name" placeholder="Your Name" required />
+  <input type="email" name="email" placeholder="Your Email" required />
+  <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+  
+  <button type="submit">Send</button>
+</form>
+
+<footer>
+  <p>© 2025 Dearly Said — Forever Kept.</p>
+</footer>
+
+</body>
+</html>
