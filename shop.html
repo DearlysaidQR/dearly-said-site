@@ -12,10 +12,6 @@
       color: #3a2e2e;
       margin: 0;
       padding: 0;
-      text-align: center;
-    }
-    h1, h2 {
-      font-family: 'Playfair Display', serif;
     }
     nav {
       position: sticky;
@@ -26,7 +22,6 @@
       justify-content: center;
       gap: 2rem;
       padding: 1rem 0;
-      z-index: 999;
     }
     nav a {
       color: #9c6e6e;
@@ -37,14 +32,24 @@
       text-decoration: underline;
     }
     section {
-      max-width: 800px;
-      margin: 4rem auto;
-      padding: 0 2rem;
+      text-align: center;
+      padding: 3rem 2rem;
     }
-    .coming-soon {
-      font-size: 1.1rem;
-      color: #7d5858;
-      margin-top: 1rem;
+    .category {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      margin-top: 3rem;
+    }
+    .category-item {
+      width: 25%;
+      text-align: center;
+      margin-bottom: 2rem;
+      cursor: pointer;
+    }
+    .category-item img {
+      width: 80%;
+      border-radius: 10px;
     }
     footer {
       text-align: center;
@@ -65,9 +70,62 @@
 </nav>
 
 <section>
-  <h1>Shop Our QR Greeting Cards</h1>
-  <p class="coming-soon">Our full product collection is launching soon! Stay tuned for romantic, funny, and custom card designs — just in time for Mother’s Day 💌</p>
-  <p style="margin-top: 2rem;"><a href="contact.html" style="font-weight: bold;">Want a custom order? Contact us!</a></p>
+  <h1>Shop by Occasion</h1>
+  <p style="font-size: 1.1rem; color: #7d5858;">Browse our beautiful collection of personalized cards for every special occasion!</p>
+</section>
+
+<section class="category">
+  <div class="category-item">
+    <img src="wedding_image_url_here.jpg" alt="Wedding Cards">
+    <h3>Weddings</h3>
+    <a href="weddings.html">Browse</a>
+  </div>
+  <div class="category-item">
+    <img src="birthday_image_url_here.jpg" alt="Birthday Cards">
+    <h3>Birthdays</h3>
+    <a href="birthdays.html">Browse</a>
+  </div>
+  <div class="category-item">
+    <img src="mothers_day_image_url_here.jpg" alt="Mother's Day Cards">
+    <h3>Mother's Day</h3>
+    <a href="mothers-day.html">Browse</a>
+  </div>
+  <div class="category-item">
+    <img src="romance_image_url_here.jpg" alt="Romantic Cards">
+    <h3>Romance</h3>
+    <a href="romance.html">Browse</a>
+  </div>
+</section>
+
+<section class="category">
+  <div class="category-item">
+    <img src="humorous_image_url_here.jpg" alt="Humorous Cards">
+    <h3>Humorous</h3>
+    <a href="humorous.html">Browse</a>
+  </div>
+  <div class="category-item">
+    <img src="funeral_image_url_here.jpg" alt="Sympathy Cards">
+    <h3>Funerals</h3>
+    <a href="funerals.html">Browse</a>
+  </div>
+  <div class="category-item">
+    <img src="special_occasions_image_url_here.jpg" alt="Special Occasions Cards">
+    <h3>Special Occasions</h3>
+    <a href="special-occasions.html">Browse</a>
+  </div>
+  <div class="category-item">
+    <img src="thank_you_image_url_here.jpg" alt="Thank You Cards">
+    <h3>Thank You</h3>
+    <a href="thank-you.html">Browse</a>
+  </div>
+</section>
+
+<section class="category">
+  <div class="category-item">
+    <img src="events_image_url_here.jpg" alt="Event Cards">
+    <h3>Events</h3>
+    <a href="events.html">Browse</a>
+  </div>
 </section>
 
 <footer>
