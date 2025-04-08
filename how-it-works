@@ -1,12 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>How It Works – Dearly Said</title>
+  <meta charset="UTF-8" />
+  <title>How It Works | Dearly Said</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 2rem;
+      background-color: #fdfcfc;
+      color: #3a2e2e;
+      text-align: center;
+    }
+    a {
+      text-decoration: none;
+      color: #9c6e6e;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
   <h1>How It Works</h1>
-  <p>This page will explain how the QR cards work.</p>
-  <p><a href="index.html">Back to Home</a></p>
+  <ol style="text-align: left; max-width: 600px; margin: 2rem auto;">
+    <li><strong>Choose your card design</strong>: romantic, funny, sentimental — whatever fits your vibe.</li>
+    <li><strong>Upload your message</strong>: record a voice note or video that we embed into a QR code.</li>
+    <li><strong>We deliver the magic</strong>: your card arrives with a scannable code that plays your message!</li>
+  </ol>
+  <p><a href="index.html">← Back to Home</a></p>
 </body>
 </html>
