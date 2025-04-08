@@ -1,12 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Contact – Dearly Said</title>
+  <meta charset="UTF-8" />
+  <title>Contact | Dearly Said</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 2rem;
+      background-color: #fdfcfc;
+      color: #3a2e2e;
+      text-align: center;
+    }
+    input, textarea {
+      display: block;
+      margin: 0.5rem auto;
+      width: 90%;
+      max-width: 400px;
+      padding: 0.7rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    button {
+      background: #9c6e6e;
+      color: white;
+      border: none;
+      padding: 0.7rem 1.5rem;
+      font-weight: bold;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    a {
+      display: inline-block;
+      margin-top: 2rem;
+      text-decoration: none;
+      color: #9c6e6e;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
   <h1>Contact Us</h1>
-  <p>You can add a form or email here.</p>
-  <p><a href="index.html">Back to Home</a></p>
+  <p>Questions, custom orders, or just want to say hi? Reach out below!</p>
+  <form>
+    <input type="text" placeholder="Your Name" required />
+    <input type="email" placeholder="Your Email" required />
+    <textarea rows="5" placeholder="Your Message" required></textarea>
+    <button type="submit">Send</button>
+  </form>
+  <a href="index.html">← Back to Home</a>
 </body>
 </html>
