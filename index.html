@@ -4,55 +4,76 @@
   <meta charset="UTF-8">
   <title>Dearly Said | Personalized QR Cards</title>
   <link rel="stylesheet" href="styles.css">
+  <style>
+    .header-title {
+      font-family: 'Georgia', serif;
+      font-size: 2.8em;
+      color: #cc6f56;
+      margin-top: 20px;
+    }
+    .nav-tabs {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      background-color: #fff4ec;
+      padding: 12px 0;
+      border-top: 1px solid #eee;
+      border-bottom: 1px solid #eee;
+    }
+    .nav-tabs a {
+      text-decoration: none;
+      color: #cc6f56;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
 
-  <!-- Responsive Navigation Bar -->
-  <nav class="navbar">
-    <div class="nav-brand"><a href="index.html">Dearly Said</a></div>
-    <input type="checkbox" id="nav-toggle" class="nav-toggle">
-    <label for="nav-toggle" class="nav-toggle-label">&#9776;</label>
-    <ul class="nav-menu">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="shop.html">Shop</a></li>
-      <li><a href="how-it-works.html">How It Works</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
+  <!-- Hero Banner with Title -->
+  <div style="text-align: center;">
+    <img src="images/dearly_said_banner.png" alt="Dearly Said Banner" style="width: 100%; max-height: 400px; object-fit: cover;">
+    <div class="header-title">Dearly Said, Forever Kept</div>
+  </div>
 
-  <!-- Hero Section -->
-  <header style="text-align: center; padding: 60px 20px; background-color: #fdf6f0;">
-    <img src="images/dearly_said_banner.png" alt="Dearly Said Banner" style="max-width: 100%; height: auto;">
-    <h1 style="font-size: 2.5em; color: #cc6f56;">Send Your Voice with Heart</h1>
-    <p style="font-size: 1.2em; max-width: 600px; margin: auto;">
-      Dearly Said lets you create heartfelt, personalized greeting cards with your voice—delivered via a QR code.
+  <!-- Navigation Tabs Under Banner -->
+  <div class="nav-tabs">
+    <a href="index.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="how-it-works.html">How It Works</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <!-- Welcome Message -->
+  <section style="text-align: center; padding: 40px 20px;">
+    <p style="font-size: 1.2em; max-width: 700px; margin: auto;">
+      Personalized greeting cards that carry your real voice. Each card includes a unique QR code that lets your loved one hear your heartfelt message—wherever they are, whenever they need it. 
     </p>
     <br>
-    <a href="shop.html" style="background-color: #f7c59f; padding: 12px 24px; color: #333; text-decoration: none; border-radius: 5px; font-weight: bold;">Shop Now</a>
-  </header>
+    <a href="shop.html" style="background-color: #f7c59f; padding: 12px 24px; color: #333; text-decoration: none; border-radius: 5px; font-weight: bold;">Start Shopping</a>
+  </section>
 
-  <!-- Info Cards -->
+  <!-- Featured Info Cards -->
   <section style="display: flex; flex-wrap: wrap; justify-content: center; padding: 40px; gap: 40px; background-color: #fefdfb;">
     <div style="max-width: 400px;">
       <img src="https://picsum.photos/id/1011/400/250" alt="Greeting Cards" style="width:100%; border-radius:10px;">
-      <h3 style="text-align: center;">Handwritten Meets Digital</h3>
+      <h3 style="text-align: center;">Keepsakes That Speak</h3>
     </div>
     <div style="max-width: 400px;">
       <img src="https://picsum.photos/id/1025/400/250" alt="QR Voice Messages" style="width:100%; border-radius:10px;">
-      <h3 style="text-align: center;">Your Voice, Their Moment</h3>
+      <h3 style="text-align: center;">Modern Messages with Meaning</h3>
     </div>
   </section>
 
-  <!-- How it Works Teaser -->
+  <!-- How it Works Section -->
   <section style="background-color: #fdf6f0; padding: 40px; text-align: center;">
     <h2 style="color: #cc6f56;">How It Works</h2>
-    <p>Record your message, upload it with your card order, and we embed a private QR code they can scan to hear your voice.</p>
+    <p style="max-width: 700px; margin: auto;">Record your voice, upload your file, and we’ll create a card that shares your words via QR code. A keepsake that touches hearts in the most personal way.</p>
     <video width="80%" controls style="margin-top: 20px; border-radius: 10px;">
       <source src="videos/dearlysaid_intro.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
     <br><br>
-    <a href="how-it-works.html" style="background-color: #ffcba4; padding: 10px 20px; color: #333; border-radius: 5px; text-decoration: none;">Learn More</a>
+    <a href="how-it-works.html" style="background-color: #ffcba4; padding: 10px 20px; color: #333; border-radius: 5px; text-decoration: none;">See More Details</a>
   </section>
 
 </body>
