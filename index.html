@@ -8,174 +8,180 @@
     body {
       margin: 0;
       font-family: 'Georgia', serif;
-      background-color: #fffefc;
-    }
-
-    .top-header {
-      text-align: center;
-      padding: 25px 0 10px;
-      font-size: 2em;
-      color: #b45f45;
-    }
-
-    .nav-bar {
-      display: flex;
-      justify-content: center;
-      background-color: #f7f2ec;
-      padding: 12px 0;
-      border-top: 1px solid #e0dcd4;
-      border-bottom: 1px solid #e0dcd4;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
-    .nav-bar a {
-      margin: 0 20px;
-      color: #b45f45;
-      text-decoration: none;
-      font-weight: bold;
-      font-family: 'Arial', sans-serif;
-    }
-
-    .hero {
-      position: relative;
-    }
-
-    .hero img {
-      width: 100%;
-      height: auto;
-      max-height: 600px;
-      object-fit: cover;
-    }
-
-    .hero-text {
-      position: absolute;
-      top: 40%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      color: white;
-      font-size: 2em;
-      background-color: rgba(0, 0, 0, 0.5);
-      padding: 15px 30px;
-      border-radius: 10px;
-    }
-
-    .section {
-      text-align: center;
-      padding: 50px 20px;
-    }
-
-    .product-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 30px;
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    .product-card {
-      width: 220px;
-      text-align: center;
-    }
-
-    .product-card img {
-      width: 100%;
-      border-radius: 10px;
-      box-shadow: 0 0 8px rgba(0,0,0,0.1);
-    }
-
-    .product-card h3 {
-      font-size: 1em;
+      background-color: #fdfcfb;
       color: #444;
     }
 
-    footer {
-      background-color: #f3f1ef;
+    /* Header section with brand name and intro */
+    .header {
       text-align: center;
-      padding: 30px 20px;
-      font-size: 0.9em;
+      padding: 30px 20px 10px;
+    }
+
+    .header h1 {
+      font-family: 'Lucida Handwriting', cursive;
+      font-size: 3em;
+      color: #b45f45;
+      margin-bottom: 5px;
+    }
+
+    .header p {
+      font-size: 1.1em;
+      max-width: 600px;
+      margin: 0 auto;
       color: #777;
     }
 
-    footer a {
-      color: #b45f45;
+    /* Top utility bar */
+    .utility-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 30px;
+      background-color: #f5eee9;
+      font-size: 0.95em;
+      border-top: 1px solid #eee;
+      border-bottom: 1px solid #eee;
+    }
+
+    .utility-bar input[type="text"] {
+      padding: 8px;
+      width: 200px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .account-menu {
+      position: relative;
+      display: inline-block;
+    }
+
+    .account-dropdown {
+      display: none;
+      position: absolute;
+      right: 0;
+      background-color: white;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      min-width: 160px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    }
+
+    .account-dropdown a {
+      color: #333;
+      padding: 10px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .account-dropdown a:hover {
+      background-color: #f7f7f7;
+    }
+
+    .account-menu:hover .account-dropdown {
+      display: block;
+    }
+
+    .nav-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      background-color: #fcf7f4;
+      border-top: 1px solid #eee;
+      border-bottom: 1px solid #eee;
+      padding: 10px 0;
+    }
+
+    .nav-tabs a {
       margin: 0 15px;
       text-decoration: none;
+      color: #b45f45;
+      font-weight: bold;
+      font-size: 0.95em;
+    }
+
+    .hero-banner {
+      width: 100%;
+      height: auto;
+      max-height: 500px;
+      object-fit: cover;
+    }
+
+    .section {
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .section video {
+      max-width: 90%;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9em;
+      color: #777;
+      padding: 30px 20px;
+      background-color: #f5eee9;
     }
   </style>
 </head>
 <body>
 
-  <!-- Brand Header -->
-  <div class="top-header">Dearly Said, Forever Kept</div>
+  <!-- Header -->
+  <div class="header">
+    <h1>Dearly Said, Forever Kept</h1>
+    <p>Send your voice in a card — heartfelt, lasting, and uniquely you.</p>
+  </div>
+
+  <!-- Utility Bar -->
+  <div class="utility-bar">
+    <input type="text" placeholder="Find the perfect gift">
+    <div style="display: flex; align-items: center; gap: 30px;">
+      <div class="account-menu">
+        <span style="cursor:pointer;">My Account ▾</span>
+        <div class="account-dropdown">
+          <a href="#">Sign In</a>
+          <a href="#">New Customer</a>
+          <a href="#">Order Status</a>
+        </div>
+      </div>
+      <a href="#" style="text-decoration:none; color:#b45f45;">My Cart</a>
+    </div>
+  </div>
 
   <!-- Navigation Tabs -->
-  <div class="nav-bar">
-    <a href="index.html">Home</a>
-    <a href="shop.html">Birthday</a>
-    <a href="shop.html">Anniversary</a>
-    <a href="shop.html">Sympathy</a>
-    <a href="shop.html">Thank You</a>
-    <a href="shop.html">Custom</a>
-    <a href="contact.html">Contact</a>
+  <div class="nav-tabs">
+    <a href="#">For Him</a>
+    <a href="#">For Her</a>
+    <a href="#">Wedding</a>
+    <a href="#">Memorial</a>
+    <a href="#">Baby & Pregnancy</a>
+    <a href="#">Seasonal</a>
+    <a href="#">Birthdays</a>
+    <a href="#">Special Occasions</a>
+    <a href="#">Pets</a>
+    <a href="#">Humorous</a>
   </div>
 
-  <!-- Hero Section -->
-  <div class="hero">
-    <img src="images/dearly_said_banner.png" alt="Dearly Said Hero Image">
-    <div class="hero-text">Give the gift of your voice</div>
-  </div>
+  <!-- Hero Banner -->
+  <img src="images/dearly_said_banner.png" class="hero-banner" alt="Dearly Said Banner">
 
-  <!-- Featured Cards Section -->
+  <!-- Original Messaging + Video -->
   <div class="section">
-    <h2 style="color:#b45f45;">Featured QR Message Cards</h2>
-    <div class="product-grid">
-      <div class="product-card">
-        <img src="Birthdays/card1.jpg" alt="Birthday Card">
-        <h3>Birthday Voice Card</h3>
-      </div>
-      <div class="product-card">
-        <img src="Sympathy/card1.jpg" alt="Sympathy Card">
-        <h3>Sympathy Message</h3>
-      </div>
-      <div class="product-card">
-        <img src="ThankYou/card1.jpg" alt="Thank You Card">
-        <h3>Thank You Note</h3>
-      </div>
-    </div>
+    <h2 style="color:#b45f45;">How It Works</h2>
+    <p>Upload a voice message. Pick a card. We’ll take care of the rest. Your recipient receives a beautifully designed greeting card with a private QR code linked to your message. It’s simple. It’s powerful. It’s personal.</p>
+    <video controls>
+      <source src="videos/dearlysaid_intro.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
   </div>
 
-  <!-- Second Row Section -->
-  <div class="section" style="background-color:#fdf8f4;">
-    <h2 style="color:#b45f45;">Shop by Occasion</h2>
-    <div class="product-grid">
-      <div class="product-card">
-        <img src="Anniversary/card1.jpg" alt="Anniversary Card">
-        <h3>Anniversary Message</h3>
-      </div>
-      <div class="product-card">
-        <img src="Custom/card1.jpg" alt="Custom Card">
-        <h3>Custom Recording Card</h3>
-      </div>
-      <div class="product-card">
-        <img src="FathersDay/card1.jpg" alt="Father's Day Card">
-        <h3>Father's Day Voice Card</h3>
-      </div>
-    </div>
-  </div>
-
-  <!-- Footer Section -->
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Dearly Said. All rights reserved.</p>
-    <div>
-      <a href="index.html">Home</a> |
-      <a href="shop.html">Shop</a> |
-      <a href="contact.html">Contact</a>
-    </div>
-    <br>
-    <p>Send your love through sound — one card at a time.</p>
+    &copy; 2025 Dearly Said. All rights reserved.<br>
+    Created with heart and honesty.
   </footer>
 
 </body>
