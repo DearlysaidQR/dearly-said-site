@@ -20,6 +20,7 @@
       padding: 15px 10px;
       background-color: #fffaf7;
       border-bottom: 1px solid #eee;
+      flex-wrap: wrap;
     }
 
     .top-nav a {
@@ -28,6 +29,15 @@
       font-weight: bold;
       font-family: 'Georgia', serif;
       font-size: 1em;
+    }
+
+    .top-nav .cart {
+      font-size: 1.05em;
+      font-weight: bold;
+      color: #b45f45;
+      display: flex;
+      align-items: center;
+      gap: 5px;
     }
 
     .header {
@@ -184,13 +194,14 @@
 </head>
 <body>
 
-  <!-- Top Navigation Links -->
+  <!-- Top Navigation Links (with cart included) -->
   <div class="top-nav">
     <a href="index.html">Home</a>
     <a href="shop.html">Shop</a>
     <a href="how-it-works.html">How it Works</a>
     <a href="contact.html">Contact</a>
     <a href="faq.html">FAQ</a>
+    <span class="cart">🛒 My Cart (0)</span>
   </div>
 
   <!-- Header Title -->
@@ -212,7 +223,6 @@
           <a href="#">Order Status</a>
         </div>
       </div>
-      <a href="#" style="text-decoration:none; color:#b45f45;">My Cart</a>
     </div>
   </div>
 
