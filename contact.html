@@ -1,107 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Contact | Dearly Said</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      background: #fdfcfc;
-      color: #3a2e2e;
-      margin: 0;
-      padding: 0;
-      text-align: center;
-    }
-    h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.5rem;
-      margin-top: 3rem;
-    }
-    p {
-      font-size: 1.1rem;
-    }
-    nav {
-      position: sticky;
-      top: 0;
-      background: white;
-      border-bottom: 1px solid #ddd;
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      padding: 1rem 0;
-      z-index: 999;
-    }
-    nav a {
-      color: #9c6e6e;
-      text-decoration: none;
-      font-weight: 600;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    form {
-      margin: 2rem auto;
-      max-width: 500px;
-      padding: 1rem;
-    }
-    input, textarea {
-      width: 100%;
-      padding: 0.8rem;
-      margin: 0.5rem 0;
-      font-size: 1rem;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-    }
-    button {
-      background: #9c6e6e;
-      color: white;
-      border: none;
-      padding: 0.75rem 1.5rem;
-      border-radius: 8px;
-      font-weight: bold;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-    button:hover {
-      background: #7d5858;
-    }
-    footer {
-      text-align: center;
-      padding: 2rem;
-      background: #f8eeee;
-      margin-top: 4rem;
-      font-size: 0.9rem;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <title>Contact Us | Dearly Said</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<nav>
-  <a href="index.html">Home</a>
-  <a href="shop.html">Shop</a>
-  <a href="how-it-works.html">How It Works</a>
-  <a href="contact.html">Contact</a>
-</nav>
+  <h1>Contact Us</h1>
+  <p style="text-align: center; max-width: 600px; margin: auto;">
+    Questions or custom requests? We’d love to hear from you.
+  </p>
 
-<h1>Contact Us</h1>
-<p>Questions, custom orders, or just want to say hi? Reach out below!</p>
-
-<form action="https://formspree.io/f/xkgjpavb" method="POST">
-  <input type="hidden" name="_captcha" value="false">
-  <input type="hidden" name="_next" value="https://dearlysaid.netlify.app/thank-you.html">
-  
-  <input type="text" name="name" placeholder="Your Name" required />
-  <input type="email" name="email" placeholder="Your Email" required />
-  <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-  
-  <button type="submit">Send</button>
-</form>
-
-<footer>
-  <p>© 2025 Dearly Said — Forever Kept.</p>
-</footer>
+  <form name="contact" method="POST" data-netlify="true" style="max-width: 500px; margin: 40px auto; display: flex; flex-direction: column; gap: 15px;">
+    <input type="text" name="name" placeholder="Your Name" required style="padding: 10px;">
+    <input type="email" name="email" placeholder="Your Email" required style="padding: 10px;">
+    <textarea name="message" placeholder="Your Message" rows="5" required style="padding: 10px;"></textarea>
+    <button type="submit">Send Message</button>
+  </form>
 
 </body>
 </html>
