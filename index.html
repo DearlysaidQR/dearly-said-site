@@ -6,8 +6,8 @@
   <link rel="stylesheet" href="styles.css">
   <style>
     body {
-      font-family: 'Georgia', serif;
       margin: 0;
+      font-family: 'Georgia', serif;
       background-color: #fffefc;
     }
 
@@ -25,6 +25,9 @@
       padding: 12px 0;
       border-top: 1px solid #e0dcd4;
       border-bottom: 1px solid #e0dcd4;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
 
     .nav-bar a {
@@ -87,6 +90,20 @@
       font-size: 1em;
       color: #444;
     }
+
+    footer {
+      background-color: #f3f1ef;
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 0.9em;
+      color: #777;
+    }
+
+    footer a {
+      color: #b45f45;
+      margin: 0 15px;
+      text-decoration: none;
+    }
   </style>
 </head>
 <body>
@@ -111,7 +128,7 @@
     <div class="hero-text">Give the gift of your voice</div>
   </div>
 
-  <!-- Featured Section -->
+  <!-- Featured Cards Section -->
   <div class="section">
     <h2 style="color:#b45f45;">Featured QR Message Cards</h2>
     <div class="product-grid">
@@ -129,6 +146,37 @@
       </div>
     </div>
   </div>
+
+  <!-- Second Row Section -->
+  <div class="section" style="background-color:#fdf8f4;">
+    <h2 style="color:#b45f45;">Shop by Occasion</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="Anniversary/card1.jpg" alt="Anniversary Card">
+        <h3>Anniversary Message</h3>
+      </div>
+      <div class="product-card">
+        <img src="Custom/card1.jpg" alt="Custom Card">
+        <h3>Custom Recording Card</h3>
+      </div>
+      <div class="product-card">
+        <img src="FathersDay/card1.jpg" alt="Father's Day Card">
+        <h3>Father's Day Voice Card</h3>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>&copy; 2025 Dearly Said. All rights reserved.</p>
+    <div>
+      <a href="index.html">Home</a> |
+      <a href="shop.html">Shop</a> |
+      <a href="contact.html">Contact</a>
+    </div>
+    <br>
+    <p>Send your love through sound — one card at a time.</p>
+  </footer>
 
 </body>
 </html>
