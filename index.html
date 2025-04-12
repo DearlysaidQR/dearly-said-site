@@ -12,6 +12,7 @@
       color: #444;
     }
 
+    /* Header */
     .header {
       text-align: center;
       padding: 30px 20px 10px;
@@ -26,20 +27,25 @@
 
     .header p {
       font-size: 1.1em;
-      max-width: 600px;
+      max-width: 650px;
       margin: 0 auto;
       color: #777;
     }
 
+    /* Utility Bar */
     .utility-bar {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      flex-wrap: wrap;
       padding: 10px 30px;
       background-color: #f5eee9;
       font-size: 0.95em;
       border-top: 1px solid #eee;
       border-bottom: 1px solid #eee;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
 
     .utility-bar input[type="text"] {
@@ -49,9 +55,22 @@
       border-radius: 5px;
     }
 
+    .nav-links {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex: 1;
+    }
+
+    .nav-links a {
+      color: #b45f45;
+      font-weight: bold;
+      text-decoration: none;
+      font-family: 'Arial', sans-serif;
+    }
+
     .account-menu {
       position: relative;
-      display: inline-block;
     }
 
     .account-dropdown {
@@ -80,42 +99,67 @@
       display: block;
     }
 
-    .nav-tabs {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      background-color: #fcf7f4;
-      border-top: 1px solid #eee;
-      border-bottom: 1px solid #eee;
-      padding: 10px 0;
-    }
-
-    .nav-tabs a {
-      margin: 0 15px;
-      text-decoration: none;
-      color: #b45f45;
-      font-weight: bold;
-      font-size: 0.95em;
-    }
-
+    /* Banner */
     .hero-banner {
       width: 100%;
-      height: auto;
-      max-height: 500px;
+      height: 350px;
       object-fit: cover;
+      display: block;
     }
 
+    /* Category Images */
+    .category-row {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 40px 20px;
+      background-color: #fffaf7;
+    }
+
+    .category {
+      text-align: center;
+      width: 200px;
+    }
+
+    .category img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      border-radius: 10px;
+      object-fit: cover;
+      box-shadow: 0 0 6px rgba(0,0,0,0.08);
+    }
+
+    .category p {
+      margin-top: 10px;
+      font-weight: bold;
+      color: #b45f45;
+    }
+
+    /* Info Section */
     .section {
-      padding: 50px 20px;
+      padding: 40px 20px;
       text-align: center;
     }
 
-    .section video {
-      max-width: 90%;
-      border-radius: 10px;
-      margin-top: 20px;
+    .section h2 {
+      color: #b45f45;
     }
 
+    .section p {
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 1.05em;
+      color: #555;
+    }
+
+    video {
+      margin-top: 25px;
+      max-width: 90%;
+      border-radius: 12px;
+    }
+
+    /* Footer */
     footer {
       text-align: center;
       font-size: 0.9em;
@@ -130,12 +174,18 @@
   <!-- Header -->
   <div class="header">
     <h1>Dearly Said, Forever Kept</h1>
-    <p>Send your voice in a card — heartfelt, lasting, and uniquely you.</p>
+    <p>Turn your words into forever keepsakes with QR-coded cards for love, family, and celebration.</p>
   </div>
 
   <!-- Utility Bar -->
   <div class="utility-bar">
     <input type="text" placeholder="Find the perfect gift">
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="how-it-works.html">How it Works</a>
+      <a href="contact.html">Contact</a>
+    </div>
     <div style="display: flex; align-items: center; gap: 30px;">
       <div class="account-menu">
         <span style="cursor:pointer;">My Account ▾</span>
@@ -149,27 +199,39 @@
     </div>
   </div>
 
-  <!-- Navigation Tabs -->
-  <div class="nav-tabs">
-    <a href="#">For Him</a>
-    <a href="#">For Her</a>
-    <a href="#">Wedding</a>
-    <a href="#">Memorial</a>
-    <a href="#">Baby & Pregnancy</a>
-    <a href="#">Seasonal</a>
-    <a href="#">Birthdays</a>
-    <a href="#">Special Occasions</a>
-    <a href="#">Pets</a>
-    <a href="#">Humorous</a>
+  <!-- Banner -->
+  <img src="images/Banner.png" alt="Dearly Said Banner" class="hero-banner">
+
+  <!-- Category Tiles -->
+  <div class="category-row">
+    <div class="category">
+      <img src="images/greeting_cards.jpg" alt="Greeting Cards">
+      <p>Greeting Cards</p>
+    </div>
+    <div class="category">
+      <img src="images/journals.jpg" alt="Journals and Memory Books">
+      <p>Journals & Memory Books</p>
+    </div>
+    <div class="category">
+      <img src="images/keepsakes.jpg" alt="Keepsakes">
+      <p>Keepsakes</p>
+    </div>
+    <div class="category">
+      <img src="images/gifts.jpg" alt="Gifts">
+      <p>Gifts</p>
+    </div>
   </div>
 
-  <!-- Hero Banner -->
-  <img src="images/dearly_said_banner.png" class="hero-banner" alt="Dearly Said Banner">
-
-  <!-- How It Works + Video -->
+  <!-- What is a QR Greeting Card? -->
   <div class="section">
-    <h2 style="color:#b45f45;">How It Works</h2>
-    <p>Upload a voice message. Pick a card. We’ll take care of the rest. Your recipient receives a beautifully designed greeting card with a private QR code linked to your message. It’s simple. It’s powerful. It’s personal.</p>
+    <h2>What is a QR Greeting Card?</h2>
+    <p>It’s more than a card — it’s a moment, a memory, and a message you can replay forever. Our beautifully designed greeting cards include scannable QR codes that link to personalized videos or voice notes. Perfect for weddings, birthdays, anniversaries, or just because.</p>
+  </div>
+
+  <!-- Video Section -->
+  <div class="section">
+    <h2>See a Card in Action</h2>
+    <p>Watch how our QR message cards turn your voice into a cherished keepsake.</p>
     <video controls>
       <source src="videos/dearlysaid_intro.mp4" type="video/mp4">
       Your browser does not support the video tag.
