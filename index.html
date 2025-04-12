@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>Dearly Said | Personalized QR Cards</title>
   <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
@@ -19,23 +19,17 @@
     }
 
     .header h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.8em;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3.2em;
       color: #b45f45;
       margin: 0;
     }
 
-    .header span {
+    .header .subtitle {
       font-family: 'Georgia', serif;
-      font-size: 1.2em;
+      font-size: 1.1em;
       color: #a5624f;
-    }
-
-    .header p {
-      font-size: 1.05em;
-      max-width: 650px;
-      margin: 10px auto 0;
-      color: #777;
+      margin-top: 5px;
     }
 
     .sticky-nav {
@@ -127,6 +121,15 @@
       display: block;
     }
 
+    .tagline-below-banner {
+      font-size: 1.2em;
+      text-align: center;
+      padding: 30px 20px 10px;
+      color: #5b3b2b;
+      max-width: 700px;
+      margin: auto;
+    }
+
     .category-row {
       display: flex;
       justify-content: center;
@@ -179,11 +182,8 @@
 
   <!-- Updated Header -->
   <div class="header">
-    <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: baseline; gap: 10px;">
-      <h1>Dearly Said</h1>
-      <span>– Forever Kept</span>
-    </div>
-    <p>Turn your words into forever keepsakes with QR-coded cards for love, family, and celebration.</p>
+    <h1>Dearly Said</h1>
+    <div class="subtitle">Forever Kept</div>
   </div>
 
   <!-- Sticky Navigation Bar -->
@@ -224,6 +224,11 @@
 
   <!-- Hero Banner -->
   <img src="images/dearly_said_banner.png" class="hero-banner" alt="Dearly Said Banner">
+
+  <!-- Moved Tagline -->
+  <div class="tagline-below-banner">
+    Turn your words into forever keepsakes with QR-coded cards for love, family, and celebration.
+  </div>
 
   <!-- Category Grid -->
   <div class="category-row">
