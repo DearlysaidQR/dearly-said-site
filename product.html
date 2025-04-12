@@ -1,113 +1,37 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>QR Greeting Card | Dearly Said</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      background: #fdfcfc;
-      color: #3a2e2e;
-      margin: 0;
-      padding: 0;
-    }
-    h1, h2, h3 {
-      font-family: 'Playfair Display', serif;
-    }
-    nav {
-      position: sticky;
-      top: 0;
-      background: white;
-      border-bottom: 1px solid #ddd;
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      padding: 1rem 0;
-      z-index: 999;
-    }
-    nav a {
-      color: #9c6e6e;
-      text-decoration: none;
-      font-weight: 600;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    button {
-      background: #9c6e6e;
-      color: white;
-      border: none;
-      padding: 0.75rem 1.5rem;
-      border-radius: 8px;
-      font-weight: bold;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-    button:hover {
-      background: #7d5858;
-    }
-    footer {
-      text-align: center;
-      padding: 2rem;
-      background: #f8eeee;
-      margin-top: 4rem;
-      font-size: 0.9rem;
-    }
-    .product-container {
-      display: flex;
-      justify-content: space-between;
-      max-width: 1000px;
-      margin: 3rem auto;
-      padding: 0 2rem;
-    }
-    .product-info {
-      flex: 1;
-      padding-right: 2rem;
-    }
-    .product-image {
-      flex: 1;
-      max-width: 400px;
-      margin: 0 auto;
-    }
-    .product-image img {
-      width: 100%;
-      border-radius: 12px;
-      box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
-    }
-  </style>
-</head>
-<body>
-
-<nav>
-  <a href="index.html">Home</a>
-  <a href="shop.html">Shop</a>
-  <a href="how-it-works.html">How It Works</a>
-  <a href="contact.html">Contact</a>
-</nav>
-
-<section style="text-align: center; padding: 3rem 2rem;">
-  <h1>QR Greeting Card</h1>
-  <p style="font-size: 1.1rem; color: #7d5858;">A personalized greeting card that comes to life with a QR code, allowing you to send a voice message or video that lasts forever.</p>
-</section>
-
-<div class="product-container">
-  <div class="product-info">
-    <h2 style="font-size: 1.8rem;">Product Details</h2>
-    <p style="font-size: 1.1rem; max-width: 600px; margin: 0 auto 1rem;">Perfect for weddings, birthdays, anniversaries, or just a meaningful way to connect. Customize your message with a QR code that links to a video or voice recording. Send a heartfelt message that can be replayed forever.</p>
-    <p style="font-size: 1.3rem; color: #9c6e6e;">Price: $15.99</p>
-    <button>Buy Now</button>
-  </div>
-  
-  <div class="product-image">
-    <img src="https://i.imgur.com/VsiIHTN.png" alt="QR Greeting Card Mockup">
-  </div>
-</div>
-
-<footer>
-  <p>© 2025 Dearly Said — Forever Kept.</p>
-</footer>
-
-</body>
-</html>
+const products = [
+  {
+    id: 1,
+    name: "Birthday Wishes",
+    category: "Birthday",
+    price: 5.99,
+    image: "https://picsum.photos/id/1011/200/300",
+  },
+  {
+    id: 2,
+    name: "Love & Laughter",
+    category: "Anniversary",
+    price: 6.99,
+    image: "https://picsum.photos/id/1015/200/300",
+  },
+  {
+    id: 3,
+    name: "Thanks So Much",
+    category: "Thank You",
+    price: 4.99,
+    image: "https://picsum.photos/id/1025/200/300",
+  },
+  {
+    id: 4,
+    name: "In Loving Memory",
+    category: "Sympathy",
+    price: 5.49,
+    image: "https://picsum.photos/id/1035/200/300",
+  },
+  {
+    id: 5,
+    name: "Custom Message",
+    category: "Custom",
+    price: 7.99,
+    image: "https://picsum.photos/id/1045/200/300",
+  }
+];
