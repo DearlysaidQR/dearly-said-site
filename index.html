@@ -1,3 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dearly Said | Personalized QR Cards</title>
+  <meta name="viewport" content="width=device-width, initial-scale=0.95">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@500&display=swap" rel="stylesheet">
+  <script>
+    function toggleMobileNav() {
+      document.getElementById('mobileNav').classList.toggle('open');
+    }
+
+    function closeMobileNav() {
+      document.getElementById('mobileNav').classList.remove('open');
+    }
+  </script>
+</head>
+<body>
+
+  <!-- Mobile Hamburger Toggle -->
+  <button class="mobile-nav-toggle" onclick="toggleMobileNav()">☰</button>
+
+  <!-- Mobile Slide-Out Navigation -->
+  <div id="mobileNav" class="mobile-nav">
+    <button class="close-btn" onclick="closeMobileNav()">✕</button>
+    <div class="dropdown">
+      <a href="#">Occasion ▾</a>
+      <div class="dropdown-content">
+        <a href="#">Wedding</a>
+        <a href="#">Anniversary</a>
+        <a href="#">Birthday</a>
+        <a href="#">Memorial/Sympathy</a>
+        <a href="#">Religious</a>
+        <a href="#">New Baby</a>
+        <a href="#">Housewarming</a>
+        <a href="#">Valentine's Day</a>
+        <a href="#">Mother's Day</a>
+        <a href="#">Father's Day</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a href="#">Recipient ▾</a>
+      <div class="dropdown-content">
+        <a href="#">Grandma</a>
+        <a href="#">Grandpa</a>
+        <a href="#">Wedding Couple</a>
+        <a href="#">New Parents</a>
         <a href="#">Pets</a>
         <a href="#">Teacher</a>
         <a href="#">Friends & Family</a>
@@ -58,7 +106,7 @@
     <div class="tagline">Turn your words into forever keepsakes with QR-coded cards for love, family, and celebration.</div>
   </div>
 
-  <!-- Nav Tabs (Desktop) -->
+  <!-- Nav Tabs (Desktop Only) -->
   <div class="nav-tabs">
     <div class="dropdown">
       <a href="#">Occasion ▾</a>
@@ -112,7 +160,7 @@
     <a href="#">Humorous</a>
   </div>
 
-  <!-- Hero Banner -->
+  <!-- Banner -->
   <img src="images/dearly_said_banner.png" class="hero-banner" alt="Dearly Said Banner">
 
   <!-- Category Grid -->
