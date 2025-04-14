@@ -378,3 +378,36 @@ footer {
     z-index: 1;
   }
 }
+@media (min-width: 769px) {
+  .sticky-nav {
+    overflow: visible !important;
+    position: relative;
+    z-index: 1000;
+  }
+
+  .nav-tabs {
+    overflow: visible !important;
+    position: relative;
+    z-index: 1001;
+  }
+
+  .dropdown {
+    position: relative;
+    z-index: 1002;
+  }
+
+  .dropdown-content {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1003;
+    background-color: #fffefc;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border: 1px solid #ddd;
+  }
+
+  .hero-banner {
+    position: relative;
+    z-index: 1;
+  }
+}
