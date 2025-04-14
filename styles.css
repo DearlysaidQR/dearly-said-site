@@ -46,35 +46,6 @@ ul {
   color: #b45f45;
 }
 
-.account-menu {
-  position: relative;
-}
-
-.account-dropdown {
-  display: none;
-  position: absolute;
-  background-color: white;
-  border: 1px solid #ddd;
-  right: 0;
-  border-radius: 4px;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-  z-index: 9999;
-}
-
-.account-dropdown a {
-  display: block;
-  padding: 10px 16px;
-  color: #333;
-}
-
-.account-dropdown a:hover {
-  background-color: #f1f1f1;
-}
-
-.account-menu:hover .account-dropdown {
-  display: block;
-}
-
 /* Header */
 .header {
   text-align: center;
@@ -111,6 +82,59 @@ ul {
   z-index: 998;
   border-top: 1px solid #eee;
   border-bottom: 1px solid #eee;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.search-container input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.search-icon {
+  font-size: 1.2em;
+  color: #999;
+}
+
+.tagline {
+  flex: 1;
+  text-align: center;
+  font-style: italic;
+  color: #6d4a3c;
+}
+
+.account-menu {
+  position: relative;
+}
+
+.account-dropdown {
+  display: none;
+  position: absolute;
+  background-color: white;
+  border: 1px solid #ddd;
+  right: 0;
+  border-radius: 4px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  z-index: 9999;
+}
+
+.account-dropdown a {
+  display: block;
+  padding: 10px 16px;
+  color: #333;
+}
+
+.account-dropdown a:hover {
+  background-color: #f1f1f1;
+}
+
+.account-menu:hover .account-dropdown {
+  display: block;
 }
 
 /* Nav Tabs & Dropdown */
@@ -230,56 +254,95 @@ footer {
 }
 
 /* Mobile Styles */
+.mobile-nav-toggle {
+  display: none;
+}
+
 @media (max-width: 768px) {
-  .top-bar {
-    flex-direction: column;
-    align-items: flex-start;
+  body {
+    font-size: 0.95rem;
   }
 
-  .mobile-top-controls {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    width: 100%;
-    padding: 10px 20px;
-    gap: 15px;
+  .top-bar .nav-links {
+    display: none;
   }
 
-  .mobile-top-controls .mobile-nav-toggle,
-  .mobile-top-controls .cart,
-  .mobile-top-controls .account-menu {
-    font-size: 1.2em;
+  .mobile-nav-toggle {
+    display: block;
+    font-size: 26px;
+    background: none;
+    border: none;
     color: #b45f45;
-    font-weight: bold;
-  }
-
-  .account-dropdown {
-    position: absolute;
-    left: 0;
-    background-color: white;
-    border: 1px solid #ddd;
-    z-index: 9999;
+    margin: 10px 20px;
+    z-index: 1003;
+    position: relative;
   }
 
   .mobile-nav {
-    z-index: 1001;
-    overflow: visible;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 75%;
+    height: 100%;
+    background-color: #fffaf7;
+    padding: 30px 20px;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+    transition: left 0.3s ease-in-out;
+    z-index: 10000;
+  }
+
+  .mobile-nav.open {
+    left: 0;
+  }
+
+  .close-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #b45f45;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+  }
+
+  .mobile-nav .dropdown {
+    margin-bottom: 20px;
+    position: relative;
+    width: fit-content;
   }
 
   .mobile-nav .dropdown-content {
-    position: relative;
-    z-index: 10000;
+    position: absolute;
+    top: 100%;
+    left: 0;
     background-color: #fffaf7;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: max-content;
+    min-width: 160px;
+    max-width: 90vw;
+    overflow-x: auto;
+    white-space: nowrap;
+    z-index: 10000;
   }
 
-  .mobile-nav .dropdown a {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  .mobile-tagline {
+    display: block;
+    font-size: 0.95em;
+    color: #6d4a3c;
+    margin-top: 10px;
+    font-style: italic;
+    padding: 0 15px;
+  }
+
+  .tagline {
+    display: none;
   }
 }
 
-/* Desktop Fixes */
+/* DESKTOP FIX: Hide hamburger, show nav links, dropdown above banner */
 @media (min-width: 769px) {
   .mobile-nav-toggle {
     display: none !important;
@@ -289,41 +352,29 @@ footer {
     display: none !important;
   }
 
+  .mobile-nav.open {
+    left: -100% !important;
+  }
+
   .nav-links {
     display: flex !important;
     gap: 20px;
     align-items: center;
   }
 
-  .sticky-nav {
-    overflow: visible !important;
-    position: relative;
-    z-index: 1000;
-  }
-
   .nav-tabs {
-    overflow: visible !important;
-    position: relative;
-    z-index: 1001;
+    z-index: 9999;
   }
 
   .dropdown {
-    position: relative;
-    z-index: 1002;
+    z-index: 9999;
   }
 
   .dropdown-content {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    z-index: 1003;
-    background-color: #fffefc;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    border: 1px solid #ddd;
+    z-index: 10000;
   }
 
   .hero-banner {
-    position: relative;
     z-index: 1;
   }
 }
