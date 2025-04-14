@@ -340,24 +340,21 @@ footer {
   }
 }
 
-/* Desktop-specific fixes */
+/* DESKTOP FIX: Ensure dropdowns are above banner */
 @media (min-width: 769px) {
-  .mobile-nav-toggle {
-    display: none !important;
-  }
-
   .nav-tabs {
     position: relative;
-    z-index: 9999;
+    z-index: 10000;
   }
 
   .dropdown {
     position: relative;
-    z-index: 9999;
+    z-index: 10001;
   }
 
   .dropdown-content {
-    z-index: 99999 !important;
+    z-index: 10002 !important;
+    position: absolute;
   }
 
   .hero-banner {
