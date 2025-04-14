@@ -1,81 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Dearly Said</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Dearly Said | Personalized QR Cards</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-
-  <!-- Navigation -->
-  <nav>
-    <!-- Mobile Hamburger Menu -->
-    <div class="mobile-only">
-      <button id="mobile-menu-toggle">☰</button>
-    </div>
-
-    <!-- Desktop Dropdowns -->
-    <ul class="nav-categories desktop-only">
-      <li class="dropdown">
-        <a href="#">Occasion</a>
-        <ul class="dropdown-menu">
-          <li>Wedding</li>
-          <li>Anniversary</li>
-          <li>Engagement</li>
-          <li>Birthday</li>
-          <li>Memorial/Sympathy</li>
-          <li>Religious</li>
-          <li>Retirement</li>
-          <li>New Baby</li>
-          <li>Housewarming</li>
-          <li>Divorce</li>
-          <li>Christmas</li>
-          <li>New Year's</li>
-          <li>Valentine's Day</li>
-          <li>Mother's Day</li>
-          <li>Father's Day</li>
-          <li>Humorous</li>
-        </ul>
-      </li>
-      <li class="dropdown">
-        <a href="#">Recipient</a>
-        <ul class="dropdown-menu">
-          <li>For him</li>
-          <li>For her</li>
-          <li>Grandma</li>
-          <li>Grandpa</li>
-          <li>Wedding Couple</li>
-          <li>Baby & Kids</li>
-          <li>New Parents</li>
-          <li>Professional</li>
-          <li>Friends & Family</li>
-          <li>Pets</li>
-          <li>Teacher</li>
-        </ul>
-      </li>
-      <li class="dropdown">
-        <a href="#">Product</a>
-        <ul class="dropdown-menu">
-          <li>Greeting Cards</li>
-          <li>Journal</li>
-          <li>Memory Books</li>
-          <li>Keepsakes & Gifts</li>
-          <li>Humorous</li>
-        </ul>
-      </li>
-    </ul>
-
-    <!-- Existing Site Name -->
-    <div class="desktop-only">
+  <!-- HEADER -->
+  <header>
+    <div class="logo">
       <a href="/">Dearly Said</a>
     </div>
-  </nav>
 
-  <!-- Mobile Dropdown Menu -->
-  <div id="mobile-menu" class="hidden mobile-only">
+    <!-- Desktop Navigation with Dropdowns -->
+    <nav class="desktop-nav">
+      <ul class="nav-links">
+        <li class="dropdown">
+          <a href="#">Occasion</a>
+          <ul class="dropdown-menu">
+            <li>Wedding</li>
+            <li>Anniversary</li>
+            <li>Engagement</li>
+            <li>Birthday</li>
+            <li>Memorial/Sympathy</li>
+            <li>Religious</li>
+            <li>Retirement</li>
+            <li>New Baby</li>
+            <li>Housewarming</li>
+            <li>Divorce</li>
+            <li>Christmas</li>
+            <li>New Year's</li>
+            <li>Valentine's Day</li>
+            <li>Mother's Day</li>
+            <li>Father's Day</li>
+            <li>Humorous</li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#">Recipient</a>
+          <ul class="dropdown-menu">
+            <li>For him</li>
+            <li>For her</li>
+            <li>Grandma</li>
+            <li>Grandpa</li>
+            <li>Wedding Couple</li>
+            <li>Baby & Kids</li>
+            <li>New Parents</li>
+            <li>Professional</li>
+            <li>Friends & Family</li>
+            <li>Pets</li>
+            <li>Teacher</li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#">Product</a>
+          <ul class="dropdown-menu">
+            <li>Greeting Cards</li>
+            <li>Journal</li>
+            <li>Memory Books</li>
+            <li>Keepsakes & Gifts</li>
+            <li>Humorous</li>
+          </ul>
+        </li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Mobile Nav Toggle -->
+    <div class="mobile-nav-toggle">
+      <button id="mobile-menu-toggle">☰</button>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden">
     <ul>
       <li><strong>Occasion</strong></li>
       <ul>
@@ -118,35 +119,40 @@
         <li>Keepsakes & Gifts</li>
         <li>Humorous</li>
       </ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
   </div>
 
-  <!-- Existing Homepage Content -->
-  <main>
-    <section class="hero">
-      <h1>Dearly Said</h1>
-      <p>Handwritten messages meet modern memories. Send love with QR message cards and keepsakes.</p>
-    </section>
+  <!-- BANNER -->
+  <section class="hero-banner">
+    <img src="images/hero-banner.jpg" alt="Dearly Said QR Banner" />
+    <div class="hero-text">
+      <h1>Personalized QR Message Cards</h1>
+      <p>Send love. Share memories. Keep them forever.</p>
+    </div>
+  </section>
 
-    <section class="products">
-      <div class="product">
-        <img src="images/product1.jpg" alt="Wedding QR Card">
-        <h2>Wedding QR Card</h2>
-        <p>Celebrate love with personalized QR messages.</p>
+  <!-- PRODUCT SECTION -->
+  <section class="products">
+    <h2>Shop Our Cards</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="images/card1.jpg" alt="Card 1" />
+        <h3>Wedding Card</h3>
       </div>
-      <div class="product">
-        <img src="images/product2.jpg" alt="Memorial Card">
-        <h2>Memorial Tribute</h2>
-        <p>Honor loved ones with a voice from the heart.</p>
+      <div class="product-card">
+        <img src="images/card2.jpg" alt="Card 2" />
+        <h3>Memorial Message</h3>
       </div>
-      <div class="product">
-        <img src="images/product3.jpg" alt="Birthday Message">
-        <h2>Birthday QR Surprise</h2>
-        <p>Send joy, laughter, and memories that last.</p>
+      <div class="product-card">
+        <img src="images/card3.jpg" alt="Card 3" />
+        <h3>Birthday Surprise</h3>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
 
+  <!-- FOOTER -->
   <footer>
     <p>&copy; 2025 Dearly Said. All rights reserved.</p>
   </footer>
@@ -155,5 +161,4 @@
   <script src="main.js"></script>
   <script src="product.js"></script>
 </body>
-
 </html>
