@@ -378,3 +378,20 @@ footer {
     z-index: 1;
   }
 }
+@media (min-width: 769px) {
+  .nav-tabs,
+  .dropdown,
+  .dropdown-content {
+    position: relative;
+    z-index: 9999;
+  }
+
+  .sticky-nav {
+    z-index: 9998;
+  }
+
+  .hero-banner {
+    position: relative;
+    z-index: 1;
+  }
+}
