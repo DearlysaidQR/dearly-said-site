@@ -9,6 +9,7 @@ body {
   font-family: 'Georgia', serif;
   background-color: #fdfcfb;
   color: #444;
+  font-size: 1rem;
 }
 
 a {
@@ -35,41 +36,6 @@ ul {
   font-weight: bold;
   color: #b45f45;
   font-size: 1em;
-  position: relative;
-}
-
-/* Dropdown Styling */
-.dropdown {
-  display: inline-block;
-  position: relative;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: #fffefc;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  z-index: 1000;
-  min-width: 180px;
-  border: 1px solid #ddd;
-}
-
-.dropdown-content a {
-  display: block;
-  padding: 10px 16px;
-  font-size: 0.95em;
-  color: #b45f45;
-  font-weight: normal;
-}
-
-.dropdown-content a:hover {
-  background-color: #fcf7f4;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
 }
 
 /* Cart */
@@ -108,7 +74,7 @@ ul {
   font-size: 0.95em;
   position: sticky;
   top: 0;
-  z-index: 999;
+  z-index: 998;
   border-top: 1px solid #eee;
   border-bottom: 1px solid #eee;
 }
@@ -149,6 +115,7 @@ ul {
   right: 0;
   border-radius: 4px;
   box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  z-index: 9999;
 }
 
 .account-dropdown a {
@@ -165,7 +132,40 @@ ul {
   display: block;
 }
 
-/* Category Tabs with Scroll */
+/* Dropdown Styling */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fffefc;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  z-index: 9999;
+  min-width: 180px;
+  border: 1px solid #ddd;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 10px 16px;
+  font-size: 0.95em;
+  color: #b45f45;
+  font-weight: normal;
+}
+
+.dropdown-content a:hover {
+  background-color: #fcf7f4;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Nav Tabs with Scroll */
 .nav-tabs {
   display: flex;
   gap: 20px;
@@ -175,6 +175,7 @@ ul {
   padding: 12px 20px;
   border-top: 1px solid #eee;
   border-bottom: 1px solid #eee;
+  z-index: 998;
 }
 
 .nav-tabs a,
@@ -192,6 +193,7 @@ ul {
   height: 350px;
   object-fit: cover;
   display: block;
+  z-index: 0;
 }
 
 /* Categories */
@@ -245,11 +247,11 @@ footer {
 }
 
 /* Mobile Responsive */
-.mobile-nav-toggle {
-  display: none;
-}
-
 @media (max-width: 768px) {
+  body {
+    font-size: 1.05rem;
+  }
+
   .top-bar .nav-links {
     display: none;
   }
@@ -283,6 +285,7 @@ footer {
   }
 
   .nav-tabs {
-    overflow-x: scroll;
+    overflow-x: auto;
+    white-space: nowrap;
   }
 }
