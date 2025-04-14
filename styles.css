@@ -373,6 +373,29 @@ footer {
   }
 }
 @media (min-width: 769px) {
+  /* Force dropdowns above hero banner */
+@media (min-width: 769px) {
+  .nav-tabs {
+    position: relative;
+    z-index: 9999;
+  }
+
+  .dropdown {
+    position: relative;
+    z-index: 9999;
+  }
+
+  .dropdown-content {
+    position: absolute;
+    z-index: 99999 !important;
+  }
+
+  .hero-banner {
+    position: relative;
+    z-index: 1;
+  }
+}
+
   .mobile-nav-toggle {
     display: none !important;
   }
