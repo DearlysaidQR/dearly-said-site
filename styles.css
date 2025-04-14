@@ -340,10 +340,18 @@ footer {
   }
 }
 
-/* DESKTOP FIX: Ensure dropdowns and nav are correct on larger screens */
+/* DESKTOP FIX: Hide hamburger and show nav links */
 @media (min-width: 769px) {
   .mobile-nav-toggle {
     display: none !important;
+  }
+
+  .mobile-nav {
+    display: none !important;
+  }
+
+  .mobile-nav.open {
+    left: -100% !important;
   }
 
   .nav-links {
