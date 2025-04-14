@@ -1,46 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Dearly Said | Personalized QR Cards</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@500&display=swap" rel="stylesheet">
-  <script>
-    function toggleMobileNav() {
-      document.getElementById('mobileNav').classList.toggle('open');
-    }
-  </script>
-</head>
-<body>
-
-  <!-- Mobile Hamburger Icon -->
-  <button class="mobile-nav-toggle" onclick="toggleMobileNav()">☰</button>
-
-  <!-- Mobile Slide-Out Navigation -->
-  <div id="mobileNav" class="mobile-nav">
-    <div class="dropdown">
-      <a href="#">Occasion ▾</a>
-      <div class="dropdown-content">
-        <a href="#">Wedding</a>
-        <a href="#">Anniversary</a>
-        <a href="#">Birthday</a>
-        <a href="#">Memorial/Sympathy</a>
-        <a href="#">Religious</a>
-        <a href="#">New Baby</a>
-        <a href="#">Housewarming</a>
-        <a href="#">Valentine's Day</a>
-        <a href="#">Mother's Day</a>
-        <a href="#">Father's Day</a>
-      </div>
-    </div>
-    <div class="dropdown">
-      <a href="#">Recipient ▾</a>
-      <div class="dropdown-content">
-        <a href="#">Grandma</a>
-        <a href="#">Grandpa</a>
-        <a href="#">Wedding Couple</a>
-        <a href="#">New Parents</a>
         <a href="#">Pets</a>
         <a href="#">Teacher</a>
         <a href="#">Friends & Family</a>
@@ -63,7 +20,7 @@
     </div>
   </div>
 
-  <!-- Top Bar Navigation -->
+  <!-- Top Bar -->
   <div class="top-bar">
     <div class="nav-links">
       <a href="index.html">Home</a>
@@ -72,24 +29,8 @@
       <a href="contact.html">Contact</a>
       <a href="faq.html">FAQ</a>
     </div>
-    <div class="cart">🛒 My Cart (0)</div>
-  </div>
-
-  <!-- Logo & Subtitle -->
-  <div class="header">
-    <h1>Dearly Said</h1>
-    <div class="subtitle">Forever Kept</div>
-    <div class="mobile-tagline">Turn your words into forever keepsakes with QR-coded cards for love, family, and celebration.</div>
-  </div>
-
-  <!-- Sticky Utility Bar (Tagline moved for mobile) -->
-  <div class="sticky-nav">
-    <div class="search-container">
-      <input type="text" placeholder="Find the perfect gift">
-      <span class="search-icon">🔍</span>
-    </div>
-    <div class="tagline">Turn your words into forever keepsakes with QR-coded cards for love, family, and celebration.</div>
-    <div style="display: flex; align-items: center; gap: 30px;">
+    <div style="display: flex; gap: 20px;">
+      <div class="cart">🛒 My Cart (0)</div>
       <div class="account-menu">
         <span style="cursor:pointer;">My Account ▾</span>
         <div class="account-dropdown">
@@ -101,7 +42,23 @@
     </div>
   </div>
 
-  <!-- Category Tabs (desktop only) -->
+  <!-- Header -->
+  <div class="header">
+    <h1>Dearly Said</h1>
+    <div class="subtitle">Forever Kept</div>
+    <div class="mobile-tagline">Turn your words into forever keepsakes with QR-coded cards for love, family, and celebration.</div>
+  </div>
+
+  <!-- Sticky Nav Bar -->
+  <div class="sticky-nav">
+    <div class="search-container">
+      <input type="text" placeholder="Find the perfect gift">
+      <span class="search-icon">🔍</span>
+    </div>
+    <div class="tagline">Turn your words into forever keepsakes with QR-coded cards for love, family, and celebration.</div>
+  </div>
+
+  <!-- Nav Tabs (Desktop) -->
   <div class="nav-tabs">
     <div class="dropdown">
       <a href="#">Occasion ▾</a>
@@ -155,7 +112,7 @@
     <a href="#">Humorous</a>
   </div>
 
-  <!-- Banner -->
+  <!-- Hero Banner -->
   <img src="images/dearly_said_banner.png" class="hero-banner" alt="Dearly Said Banner">
 
   <!-- Category Grid -->
