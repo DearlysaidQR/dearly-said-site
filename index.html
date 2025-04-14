@@ -3,188 +3,82 @@
 
 <head>
   <meta charset="UTF-8" />
-  <title>Dearly Said | Personalized QR Cards</title>
-  <link rel="stylesheet" href="styles.css" />
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Georgia', serif;
-      background-color: #fffefc;
-    }
-
-    .top-header {
-      text-align: center;
-      padding: 25px 0 10px;
-      font-size: 2em;
-      color: #b45f45;
-    }
-
-    .nav-bar,
-    .nav-categories {
-      display: flex;
-      justify-content: center;
-      background-color: #f7f2ec;
-      padding: 12px 0;
-      border-top: 1px solid #e0dcd4;
-      border-bottom: 1px solid #e0dcd4;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      gap: 20px;
-    }
-
-    .nav-bar a,
-    .nav-categories a {
-      color: #b45f45;
-      text-decoration: none;
-      font-weight: bold;
-      font-family: 'Arial', sans-serif;
-    }
-
-    .dropdown {
-      position: relative;
-    }
-
-    .dropdown-menu {
-      display: none;
-      position: absolute;
-      background: #fff;
-      padding: 10px;
-      top: 100%;
-      left: 0;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-      z-index: 1001;
-    }
-
-    .dropdown:hover .dropdown-menu {
-      display: block;
-    }
-
-    .dropdown-menu li {
-      padding: 5px 10px;
-      white-space: nowrap;
-      font-size: 0.9em;
-    }
-
-    .hero {
-      position: relative;
-    }
-
-    .hero img {
-      width: 100%;
-      height: auto;
-      max-height: 600px;
-      object-fit: cover;
-    }
-
-    .hero-text {
-      position: absolute;
-      top: 40%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      color: white;
-      font-size: 2em;
-      background-color: rgba(0, 0, 0, 0.5);
-      padding: 15px 30px;
-      border-radius: 10px;
-    }
-
-    .section {
-      text-align: center;
-      padding: 50px 20px;
-    }
-
-    .product-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 30px;
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    .product-card {
-      width: 220px;
-      text-align: center;
-    }
-
-    .product-card img {
-      width: 100%;
-      border-radius: 10px;
-      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-    }
-
-    .product-card h3 {
-      font-size: 1em;
-      color: #444;
-    }
-
-    footer {
-      background-color: #f3f1ef;
-      text-align: center;
-      padding: 30px 20px;
-      font-size: 0.9em;
-      color: #777;
-    }
-
-    footer a {
-      color: #b45f45;
-      margin: 0 15px;
-      text-decoration: none;
-    }
-
-    @media (max-width: 768px) {
-      .nav-bar {
-        display: none;
-      }
-
-      .mobile-only {
-        display: block;
-        padding: 10px;
-      }
-
-      #mobile-menu-toggle {
-        font-size: 26px;
-        background: none;
-        border: none;
-        color: #b45f45;
-      }
-
-      #mobile-menu {
-        display: none;
-        background: #f7f2ec;
-        padding: 20px;
-      }
-
-      #mobile-menu ul {
-        list-style: none;
-        padding: 0;
-      }
-
-      #mobile-menu ul li {
-        margin-bottom: 10px;
-      }
-
-      .mobile-open #mobile-menu {
-        display: block;
-      }
-    }
-
-    .mobile-only {
-      display: none;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dearly Said</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 
-  <div class="top-header">Dearly Said</div>
+  <!-- Navigation -->
+  <nav>
+    <!-- Mobile Hamburger Menu -->
+    <div class="mobile-only">
+      <button id="mobile-menu-toggle">☰</button>
+    </div>
 
-  <!-- Desktop Navigation -->
-  <div class="nav-bar nav-categories">
-    <li class="dropdown">
-      <a href="#">Occasion</a>
-      <ul class="dropdown-menu">
+    <!-- Desktop Dropdowns -->
+    <ul class="nav-categories desktop-only">
+      <li class="dropdown">
+        <a href="#">Occasion</a>
+        <ul class="dropdown-menu">
+          <li>Wedding</li>
+          <li>Anniversary</li>
+          <li>Engagement</li>
+          <li>Birthday</li>
+          <li>Memorial/Sympathy</li>
+          <li>Religious</li>
+          <li>Retirement</li>
+          <li>New Baby</li>
+          <li>Housewarming</li>
+          <li>Divorce</li>
+          <li>Christmas</li>
+          <li>New Year's</li>
+          <li>Valentine's Day</li>
+          <li>Mother's Day</li>
+          <li>Father's Day</li>
+          <li>Humorous</li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#">Recipient</a>
+        <ul class="dropdown-menu">
+          <li>For him</li>
+          <li>For her</li>
+          <li>Grandma</li>
+          <li>Grandpa</li>
+          <li>Wedding Couple</li>
+          <li>Baby & Kids</li>
+          <li>New Parents</li>
+          <li>Professional</li>
+          <li>Friends & Family</li>
+          <li>Pets</li>
+          <li>Teacher</li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#">Product</a>
+        <ul class="dropdown-menu">
+          <li>Greeting Cards</li>
+          <li>Journal</li>
+          <li>Memory Books</li>
+          <li>Keepsakes & Gifts</li>
+          <li>Humorous</li>
+        </ul>
+      </li>
+    </ul>
+
+    <!-- Existing Site Name -->
+    <div class="desktop-only">
+      <a href="/">Dearly Said</a>
+    </div>
+  </nav>
+
+  <!-- Mobile Dropdown Menu -->
+  <div id="mobile-menu" class="hidden mobile-only">
+    <ul>
+      <li><strong>Occasion</strong></li>
+      <ul>
         <li>Wedding</li>
         <li>Anniversary</li>
         <li>Engagement</li>
@@ -202,10 +96,8 @@
         <li>Father's Day</li>
         <li>Humorous</li>
       </ul>
-    </li>
-    <li class="dropdown">
-      <a href="#">Recipient</a>
-      <ul class="dropdown-menu">
+      <li><strong>Recipient</strong></li>
+      <ul>
         <li>For him</li>
         <li>For her</li>
         <li>Grandma</li>
@@ -218,86 +110,49 @@
         <li>Pets</li>
         <li>Teacher</li>
       </ul>
-    </li>
-    <li class="dropdown">
-      <a href="#">Product</a>
-      <ul class="dropdown-menu">
+      <li><strong>Product</strong></li>
+      <ul>
         <li>Greeting Cards</li>
         <li>Journal</li>
         <li>Memory Books</li>
         <li>Keepsakes & Gifts</li>
         <li>Humorous</li>
       </ul>
-    </li>
+    </ul>
   </div>
 
-  <!-- Mobile Navigation -->
-  <div class="mobile-only">
-    <button id="mobile-menu-toggle">☰ Menu</button>
-    <div id="mobile-menu">
-      <ul>
-        <li><strong>Occasion</strong></li>
-        <li>Wedding</li>
-        <li>Anniversary</li>
-        <li>Birthday</li>
-        <li>Memorial/Sympathy</li>
-        <li>Religious</li>
-        <li>New Baby</li>
-        <li>Housewarming</li>
-        <li>Valentine's Day</li>
-        <li>Mother's Day</li>
-        <li>Father's Day</li>
-        <li><strong>Recipient</strong></li>
-        <li>For him</li>
-        <li>For her</li>
-        <li>Grandma</li>
-        <li>Grandpa</li>
-        <li>Pets</li>
-        <li><strong>Product</strong></li>
-        <li>Greeting Cards</li>
-        <li>Memory Books</li>
-      </ul>
-    </div>
-  </div>
+  <!-- Existing Homepage Content -->
+  <main>
+    <section class="hero">
+      <h1>Dearly Said</h1>
+      <p>Handwritten messages meet modern memories. Send love with QR message cards and keepsakes.</p>
+    </section>
 
-  <!-- Hero Image Section -->
-  <div class="hero">
-    <img src="images/hero.jpg" alt="Personalized QR Cards">
-    <div class="hero-text">Send love, share memories</div>
-  </div>
-
-  <!-- Products -->
-  <div class="section">
-    <h2>Featured Products</h2>
-    <div class="product-grid">
-      <div class="product-card">
-        <img src="images/product1.jpg" alt="Product 1">
-        <h3>Wedding QR Card</h3>
+    <section class="products">
+      <div class="product">
+        <img src="images/product1.jpg" alt="Wedding QR Card">
+        <h2>Wedding QR Card</h2>
+        <p>Celebrate love with personalized QR messages.</p>
       </div>
-      <div class="product-card">
-        <img src="images/product2.jpg" alt="Product 2">
-        <h3>Memorial Message Card</h3>
+      <div class="product">
+        <img src="images/product2.jpg" alt="Memorial Card">
+        <h2>Memorial Tribute</h2>
+        <p>Honor loved ones with a voice from the heart.</p>
       </div>
-      <div class="product-card">
-        <img src="images/product3.jpg" alt="Product 3">
-        <h3>Birthday Surprise QR</h3>
+      <div class="product">
+        <img src="images/product3.jpg" alt="Birthday Message">
+        <h2>Birthday QR Surprise</h2>
+        <p>Send joy, laughter, and memories that last.</p>
       </div>
-    </div>
-  </div>
+    </section>
+  </main>
 
-  <!-- Footer -->
   <footer>
-    <p>© 2025 Dearly Said. All rights reserved.</p>
-    <a href="#">Privacy Policy</a>
-    <a href="#">Contact</a>
+    <p>&copy; 2025 Dearly Said. All rights reserved.</p>
   </footer>
 
   <!-- Scripts -->
-  <script>
-    document.getElementById('mobile-menu-toggle').addEventListener('click', () => {
-      document.body.classList.toggle('mobile-open');
-    });
-  </script>
+  <script src="main.js"></script>
   <script src="product.js"></script>
 </body>
 
