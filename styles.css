@@ -352,6 +352,21 @@ footer {
   .dropdown {
     position: relative;
   }
+/* Desktop-specific dropdown z-index fix */
+@media (min-width: 769px) {
+  .nav-tabs {
+    position: relative;
+    z-index: 1000;
+  }
+
+  .dropdown {
+    position: relative;
+  }
+
+  .dropdown-content {
+    z-index: 9999 !important;
+  }
+}
 
   .dropdown-content {
     z-index: 9999 !important;
