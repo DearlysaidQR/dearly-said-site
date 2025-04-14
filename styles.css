@@ -189,6 +189,7 @@ ul {
 .dropdown:hover .dropdown-content {
   display: block;
 }
+
 /* Hero Banner */
 .hero-banner {
   width: 100%;
@@ -339,10 +340,16 @@ footer {
   }
 }
 
-/* DESKTOP FIX: Ensure dropdowns are above banner */
+/* DESKTOP FIX: Ensure dropdowns and nav are correct on larger screens */
 @media (min-width: 769px) {
   .mobile-nav-toggle {
     display: none !important;
+  }
+
+  .nav-links {
+    display: flex !important;
+    gap: 20px;
+    align-items: center;
   }
 
   .nav-tabs {
