@@ -267,15 +267,36 @@ footer {
     display: none;
   }
 
+  .mobile-top-controls {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 10px 20px;
+  }
+
   .mobile-nav-toggle {
     display: block;
     font-size: 26px;
     background: none;
     border: none;
     color: #b45f45;
-    margin: 10px 20px;
     z-index: 1003;
     position: relative;
+  }
+
+  .mobile-top-controls .cart,
+  .mobile-top-controls .account-menu {
+    font-size: 1em;
+    font-weight: bold;
+    color: #b45f45;
+  }
+
+  .account-dropdown {
+    position: absolute;
+    left: 0;
+    background-color: white;
+    border: 1px solid #ddd;
+    z-index: 9999;
   }
 
   .mobile-nav {
@@ -325,7 +346,7 @@ footer {
     max-width: 90vw;
     overflow-x: auto;
     white-space: nowrap;
-    z-index: 10000;
+    z-index: 10001;
   }
 
   .mobile-tagline {
@@ -340,9 +361,25 @@ footer {
   .tagline {
     display: none;
   }
+
+  .hero-banner {
+    position: relative;
+    z-index: 1;
+  }
+
+  .header {
+    position: relative;
+    z-index: 1;
+  }
+
+  .mobile-nav,
+  .mobile-nav .dropdown,
+  .mobile-nav .dropdown-content {
+    z-index: 10001;
+  }
 }
 
-/* DESKTOP FIX: Hide hamburger, show nav links, dropdown above banner */
+/* DESKTOP FIXES */
 @media (min-width: 769px) {
   .mobile-nav-toggle {
     display: none !important;
@@ -362,23 +399,6 @@ footer {
     align-items: center;
   }
 
-  .nav-tabs {
-    z-index: 9999;
-  }
-
-  .dropdown {
-    z-index: 9999;
-  }
-
-  .dropdown-content {
-    z-index: 10000;
-  }
-
-  .hero-banner {
-    z-index: 1;
-  }
-}
-@media (min-width: 769px) {
   .sticky-nav {
     overflow: visible !important;
     position: relative;
@@ -407,6 +427,11 @@ footer {
   }
 
   .hero-banner {
+    position: relative;
+    z-index: 1;
+  }
+
+  .header {
     position: relative;
     z-index: 1;
   }
