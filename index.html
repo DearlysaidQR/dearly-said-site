@@ -5,146 +5,65 @@
   <title>Dearly Said | Personalized QR Cards</title>
   <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@500&display=swap" rel="stylesheet">
-  <style>
-    /* ADDITIONS FOR DROPDOWNS */
-    .dropdown {
-      position: relative;
-      display: inline-block;
-    }
-
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: #fffefc;
-      min-width: 180px;
-      box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-      z-index: 999;
-      border: 1px solid #eee;
-    }
-
-    .dropdown-content a {
-      color: #b45f45;
-      padding: 10px 16px;
-      text-decoration: none;
-      display: block;
-      font-weight: normal;
-      font-size: 0.95em;
-    }
-
-    .dropdown-content a:hover {
-      background-color: #fcf7f4;
-    }
-
-    .dropdown:hover .dropdown-content {
-      display: block;
-    }
-
-    /* Mobile Menu */
-    .mobile-nav {
-      display: none;
-      padding: 10px 20px;
-      background-color: #fffaf7;
-      border-top: 1px solid #eee;
-    }
-
-    .mobile-nav-toggle {
-      display: none;
-      background: none;
-      border: none;
-      font-size: 1.6em;
-      color: #b45f45;
-      padding: 10px 20px;
-    }
-
-    @media (max-width: 768px) {
-      .top-bar .nav-links {
-        display: none;
-      }
-
-      .mobile-nav-toggle {
-        display: block;
-      }
-
-      .mobile-nav.open {
-        display: block;
-      }
-
-      .mobile-nav a {
-        display: block;
-        padding: 10px 0;
-        color: #b45f45;
-        border-bottom: 1px solid #eee;
-        text-decoration: none;
-      }
-    }
-  </style>
 </head>
 <body>
 
-  <!-- Top Navigation -->
+  <!-- MOBILE HAMBURGER -->
+  <button class="mobile-nav-toggle" onclick="document.getElementById('mobileNav').classList.toggle('open')">☰</button>
+
+  <!-- Mobile Menu -->
+  <div id="mobileNav" class="mobile-nav">
+    <div class="dropdown">
+      <a href="#">Occasion ▾</a>
+      <div class="dropdown-content">
+        <a href="#">Wedding</a>
+        <a href="#">Anniversary</a>
+        <a href="#">Birthday</a>
+        <a href="#">Memorial/Sympathy</a>
+        <a href="#">Religious</a>
+        <a href="#">New Baby</a>
+        <a href="#">Housewarming</a>
+        <a href="#">Valentine's Day</a>
+        <a href="#">Mother's Day</a>
+        <a href="#">Father's Day</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a href="#">Recipient ▾</a>
+      <div class="dropdown-content">
+        <a href="#">Grandma</a>
+        <a href="#">Grandpa</a>
+        <a href="#">Wedding Couple</a>
+        <a href="#">New Parents</a>
+        <a href="#">Pets</a>
+        <a href="#">Teacher</a>
+        <a href="#">Friends & Family</a>
+        <a href="#">Professional</a>
+        <a href="#">Baby & Kids</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a href="#">Product ▾</a>
+      <div class="dropdown-content">
+        <a href="#">Greeting Cards</a>
+        <a href="#">Journals</a>
+        <a href="#">Memory Books</a>
+        <a href="#">Keepsakes</a>
+        <a href="#">Humorous</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Top Navigation & Cart -->
   <div class="top-bar">
     <div class="nav-links">
-      <div class="dropdown">
-        <a href="#">Occasion ▾</a>
-        <div class="dropdown-content">
-          <a href="#">Wedding</a>
-          <a href="#">Anniversary</a>
-          <a href="#">Birthday</a>
-          <a href="#">Memorial/Sympathy</a>
-          <a href="#">Religious</a>
-          <a href="#">New Baby</a>
-          <a href="#">Housewarming</a>
-          <a href="#">Valentine's Day</a>
-          <a href="#">Mother's Day</a>
-          <a href="#">Father's Day</a>
-        </div>
-      </div>
-
-      <div class="dropdown">
-        <a href="#">Recipient ▾</a>
-        <div class="dropdown-content">
-          <a href="#">For him</a>
-          <a href="#">For her</a>
-          <a href="#">Grandma</a>
-          <a href="#">Grandpa</a>
-          <a href="#">Wedding Couple</a>
-          <a href="#">New Parents</a>
-          <a href="#">Pets</a>
-        </div>
-      </div>
-
-      <div class="dropdown">
-        <a href="#">Product ▾</a>
-        <div class="dropdown-content">
-          <a href="#">Greeting Cards</a>
-          <a href="#">Journals</a>
-          <a href="#">Memory Books</a>
-          <a href="#">Keepsakes</a>
-          <a href="#">Humorous</a>
-        </div>
-      </div>
-
       <a href="index.html">Home</a>
       <a href="shop.html">Shop</a>
       <a href="how-it-works.html">How it Works</a>
       <a href="contact.html">Contact</a>
       <a href="faq.html">FAQ</a>
     </div>
-
-    <button class="mobile-nav-toggle" onclick="document.getElementById('mobileNav').classList.toggle('open')">☰</button>
     <div class="cart">🛒 My Cart (0)</div>
-  </div>
-
-  <!-- Mobile Nav -->
-  <div id="mobileNav" class="mobile-nav">
-    <a href="#">Occasion ▾</a>
-    <a href="#">Recipient ▾</a>
-    <a href="#">Product ▾</a>
-    <a href="index.html">Home</a>
-    <a href="shop.html">Shop</a>
-    <a href="how-it-works.html">How it Works</a>
-    <a href="contact.html">Contact</a>
-    <a href="faq.html">FAQ</a>
   </div>
 
   <!-- Logo and Subtitle -->
@@ -153,7 +72,7 @@
     <div class="subtitle">Forever Kept</div>
   </div>
 
-  <!-- Sticky Nav -->
+  <!-- Sticky Utility Nav -->
   <div class="sticky-nav">
     <div class="search-container">
       <input type="text" placeholder="Find the perfect gift">
@@ -172,10 +91,47 @@
     </div>
   </div>
 
-  <!-- Original Category Tabs -->
+  <!-- Category Tabs (with dropdowns) -->
   <div class="nav-tabs">
-    <a href="#">For Him</a>
-    <a href="#">For Her</a>
+    <div class="dropdown">
+      <a href="#">Occasion ▾</a>
+      <div class="dropdown-content">
+        <a href="#">Wedding</a>
+        <a href="#">Anniversary</a>
+        <a href="#">Birthday</a>
+        <a href="#">Memorial/Sympathy</a>
+        <a href="#">Religious</a>
+        <a href="#">New Baby</a>
+        <a href="#">Housewarming</a>
+        <a href="#">Valentine's Day</a>
+        <a href="#">Mother's Day</a>
+        <a href="#">Father's Day</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a href="#">Recipient ▾</a>
+      <div class="dropdown-content">
+        <a href="#">Grandma</a>
+        <a href="#">Grandpa</a>
+        <a href="#">Wedding Couple</a>
+        <a href="#">New Parents</a>
+        <a href="#">Pets</a>
+        <a href="#">Teacher</a>
+        <a href="#">Friends & Family</a>
+        <a href="#">Professional</a>
+        <a href="#">Baby & Kids</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a href="#">Product ▾</a>
+      <div class="dropdown-content">
+        <a href="#">Greeting Cards</a>
+        <a href="#">Journals</a>
+        <a href="#">Memory Books</a>
+        <a href="#">Keepsakes</a>
+        <a href="#">Humorous</a>
+      </div>
+    </div>
     <a href="#">Wedding</a>
     <a href="#">Memorial</a>
     <a href="#">Baby & Pregnancy</a>
