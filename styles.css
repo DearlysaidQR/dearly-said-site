@@ -148,6 +148,7 @@ ul {
   border-top: 1px solid #eee;
   border-bottom: 1px solid #eee;
   position: relative;
+  z-index: 9999;
 }
 
 .nav-tabs a,
@@ -161,6 +162,7 @@ ul {
 
 .dropdown {
   position: relative;
+  z-index: 9999;
 }
 
 .dropdown-content {
@@ -172,6 +174,7 @@ ul {
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   min-width: 180px;
   border: 1px solid #ddd;
+  z-index: 10000;
 }
 
 .dropdown-content a {
@@ -196,6 +199,8 @@ ul {
   height: 350px;
   object-fit: cover;
   display: block;
+  position: relative;
+  z-index: 1;
 }
 
 /* Categories */
@@ -303,27 +308,24 @@ footer {
 
   .mobile-nav .dropdown {
     margin-bottom: 20px;
+    position: relative;
+    width: fit-content;
   }
 
-  .mobile-nav .dropdown a {
-    display: block;
-    font-weight: bold;
-    color: #b45f45;
-    padding: 10px 0;
-    border-bottom: 1px solid #eee;
-  }
-
-  .dropdown-content {
-    position: static;
-    display: none;
-    border: none;
-    box-shadow: none;
-    background-color: transparent;
-    padding-left: 15px;
-  }
-
-  .dropdown:hover .dropdown-content {
-    display: block;
+  .mobile-nav .dropdown-content {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fffaf7;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: max-content;
+    min-width: 160px;
+    max-width: 90vw;
+    overflow-x: auto;
+    white-space: nowrap;
+    z-index: 10000;
   }
 
   .mobile-tagline {
@@ -340,7 +342,7 @@ footer {
   }
 }
 
-/* DESKTOP FIX: Hide hamburger and show nav links */
+/* DESKTOP FIX: Hide hamburger, show nav links, dropdown above banner */
 @media (min-width: 769px) {
   .mobile-nav-toggle {
     display: none !important;
@@ -361,23 +363,18 @@ footer {
   }
 
   .nav-tabs {
-    position: relative;
-    z-index: 10000;
+    z-index: 9999;
   }
 
   .dropdown {
-    position: relative;
-    z-index: 10001;
+    z-index: 9999;
   }
 
   .dropdown-content {
-    position: absolute;
-    z-index: 10002 !important;
-    background-color: #fffefc;
+    z-index: 10000;
   }
 
   .hero-banner {
-    position: relative;
     z-index: 1;
   }
 }
