@@ -29,8 +29,8 @@ ul {
   padding: 10px 30px;
   background-color: #fffaf7;
   border-bottom: 1px solid #eee;
-  position: relative;
   z-index: 1000;
+  position: relative;
 }
 
 .nav-links a {
@@ -69,7 +69,7 @@ ul {
   display: none;
 }
 
-/* Sticky Nav Bar */
+/* Sticky Nav */
 .sticky-nav {
   display: flex;
   justify-content: space-between;
@@ -108,7 +108,6 @@ ul {
   color: #6d4a3c;
 }
 
-/* Account Menu */
 .account-menu {
   position: relative;
 }
@@ -138,7 +137,7 @@ ul {
   display: block;
 }
 
-/* Nav Tabs & Dropdowns (Desktop Only) */
+/* Nav Tabs & Dropdown */
 .nav-tabs {
   display: flex;
   gap: 20px;
@@ -148,8 +147,8 @@ ul {
   padding: 12px 20px;
   border-top: 1px solid #eee;
   border-bottom: 1px solid #eee;
-  position: relative;
   z-index: 1001;
+  position: relative;
 }
 
 .nav-tabs a,
@@ -161,7 +160,6 @@ ul {
   padding: 8px 12px;
 }
 
-/* Dropdown Elements */
 .dropdown {
   position: relative;
 }
@@ -172,10 +170,10 @@ ul {
   top: 100%;
   left: 0;
   background-color: #fffefc;
-  border: 1px solid #ddd;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  z-index: 1002; /* Ensures dropdowns are above banner */
+  z-index: 9999;
   min-width: 180px;
+  border: 1px solid #ddd;
 }
 
 .dropdown-content a {
@@ -200,8 +198,6 @@ ul {
   height: 350px;
   object-fit: cover;
   display: block;
-  position: relative;
-  z-index: 0;
 }
 
 /* Categories */
@@ -260,7 +256,6 @@ footer {
 }
 
 @media (max-width: 768px) {
-  /* Adjust overall scale for mobile - slightly zoomed out */
   body {
     font-size: 0.95rem;
   }
@@ -268,8 +263,7 @@ footer {
   .top-bar .nav-links {
     display: none;
   }
-  
-  /* Mobile Hamburger Button */
+
   .mobile-nav-toggle {
     display: block;
     font-size: 26px;
@@ -280,8 +274,7 @@ footer {
     z-index: 1003;
     position: relative;
   }
-  
-  /* Mobile Slide-Out Nav (Side Drawer) */
+
   .mobile-nav {
     position: fixed;
     top: 0;
@@ -294,12 +287,11 @@ footer {
     transition: left 0.3s ease-in-out;
     z-index: 10000;
   }
-  
+
   .mobile-nav.open {
     left: 0;
   }
-  
-  /* Close Button for Mobile Nav */
+
   .close-btn {
     background: none;
     border: none;
@@ -310,11 +302,11 @@ footer {
     right: 20px;
     cursor: pointer;
   }
-  
+
   .mobile-nav .dropdown {
     margin-bottom: 20px;
   }
-  
+
   .mobile-nav .dropdown a {
     display: block;
     font-weight: bold;
@@ -322,8 +314,7 @@ footer {
     padding: 10px 0;
     border-bottom: 1px solid #eee;
   }
-  
-  /* Make the dropdown-content in mobile slide-out simpler */
+
   .dropdown-content {
     position: static;
     display: none;
@@ -332,13 +323,11 @@ footer {
     background-color: transparent;
     padding-left: 15px;
   }
-  
-  /* When hovering (or tapping) on the mobile dropdown, show the child links */
+
   .dropdown:hover .dropdown-content {
     display: block;
   }
-  
-  /* Show mobile tagline below header */
+
   .mobile-tagline {
     display: block;
     font-size: 0.95em;
@@ -347,14 +336,24 @@ footer {
     font-style: italic;
     padding: 0 15px;
   }
-  
-  /* Hide desktop's main tagline on mobile */
+
   .tagline {
     display: none;
   }
-  
-  /* Hide the desktop nav-tabs on mobile */
+}
+
+/* Desktop-specific dropdown z-index fix */
+@media (min-width: 769px) {
   .nav-tabs {
-    display: none;
+    position: relative;
+    z-index: 1000;
+  }
+
+  .dropdown {
+    position: relative;
+  }
+
+  .dropdown-content {
+    z-index: 9999 !important;
   }
 }
