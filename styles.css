@@ -12,6 +12,7 @@ body {
   font-size: 1rem;
 }
 
+/* General Elements */
 a {
   text-decoration: none;
   color: inherit;
@@ -29,23 +30,24 @@ ul {
   padding: 10px 30px;
   background-color: #fffaf7;
   border-bottom: 1px solid #eee;
+  z-index: 1000;
+  position: relative;
 }
 
-.top-bar .nav-links a {
+.nav-links a {
   margin-right: 20px;
   font-weight: bold;
   color: #b45f45;
   font-size: 1em;
 }
 
-/* Cart */
 .cart {
   font-size: 1.1em;
   font-weight: bold;
   color: #b45f45;
 }
 
-/* Header & Subtitle */
+/* Header */
 .header {
   text-align: center;
   padding: 20px;
@@ -57,14 +59,18 @@ ul {
   color: #b45f45;
 }
 
-.header .subtitle {
+.subtitle {
   font-family: 'Cormorant Upright', serif;
   font-size: 1.4em;
   color: #a5624f;
   margin-top: 5px;
 }
 
-/* Sticky Utility Bar */
+.mobile-tagline {
+  display: none;
+}
+
+/* Sticky Nav */
 .sticky-nav {
   display: flex;
   justify-content: space-between;
@@ -74,7 +80,7 @@ ul {
   font-size: 0.95em;
   position: sticky;
   top: 0;
-  z-index: 998;
+  z-index: 999;
   border-top: 1px solid #eee;
   border-bottom: 1px solid #eee;
 }
@@ -132,7 +138,29 @@ ul {
   display: block;
 }
 
-/* Dropdown Styling */
+/* Nav Tabs & Dropdown */
+.nav-tabs {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  white-space: nowrap;
+  background-color: #fcf7f4;
+  padding: 12px 20px;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  z-index: 1001;
+  position: relative;
+}
+
+.nav-tabs a,
+.nav-tabs .dropdown > a {
+  flex-shrink: 0;
+  color: #b45f45;
+  font-weight: bold;
+  font-size: 0.95em;
+  padding: 8px 12px;
+}
+
 .dropdown {
   position: relative;
 }
@@ -144,7 +172,7 @@ ul {
   left: 0;
   background-color: #fffefc;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  z-index: 9999;
+  z-index: 1002;
   min-width: 180px;
   border: 1px solid #ddd;
 }
@@ -165,35 +193,12 @@ ul {
   display: block;
 }
 
-/* Nav Tabs with Scroll */
-.nav-tabs {
-  display: flex;
-  gap: 20px;
-  overflow-x: auto;
-  white-space: nowrap;
-  background-color: #fcf7f4;
-  padding: 12px 20px;
-  border-top: 1px solid #eee;
-  border-bottom: 1px solid #eee;
-  z-index: 998;
-}
-
-.nav-tabs a,
-.nav-tabs .dropdown > a {
-  flex-shrink: 0;
-  color: #b45f45;
-  font-weight: bold;
-  font-size: 0.95em;
-  padding: 8px 12px;
-}
-
-/* Banner */
+/* Hero Banner */
 .hero-banner {
   width: 100%;
   height: 350px;
   object-fit: cover;
   display: block;
-  z-index: 0;
 }
 
 /* Categories */
@@ -225,7 +230,7 @@ ul {
   color: #b45f45;
 }
 
-/* Info Section */
+/* Section */
 .section {
   text-align: center;
   padding: 50px 20px;
@@ -246,10 +251,14 @@ footer {
   background-color: #f5eee9;
 }
 
-/* Mobile Responsive */
+/* Mobile Styles */
+.mobile-nav-toggle {
+  display: none;
+}
+
 @media (max-width: 768px) {
   body {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
   }
 
   .top-bar .nav-links {
@@ -263,29 +272,62 @@ footer {
     border: none;
     color: #b45f45;
     margin: 10px 20px;
+    z-index: 1003;
+    position: relative;
   }
 
   .mobile-nav {
-    display: none;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 75%;
+    height: 100%;
     background-color: #fffaf7;
-    padding: 20px;
-    border-top: 1px solid #eee;
+    padding: 30px 20px;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+    transition: left 0.3s ease-in-out;
+    z-index: 10000;
   }
 
   .mobile-nav.open {
-    display: block;
+    left: 0;
   }
 
-  .mobile-nav a {
+  .mobile-nav .dropdown {
+    margin-bottom: 20px;
+  }
+
+  .mobile-nav .dropdown a {
     display: block;
-    padding: 10px 0;
     font-weight: bold;
     color: #b45f45;
+    padding: 10px 0;
     border-bottom: 1px solid #eee;
   }
 
-  .nav-tabs {
-    overflow-x: auto;
-    white-space: nowrap;
+  .dropdown-content {
+    position: static;
+    display: none;
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+    padding-left: 15px;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .mobile-tagline {
+    display: block;
+    font-size: 0.95em;
+    color: #6d4a3c;
+    margin-top: 10px;
+    font-style: italic;
+    padding: 0 15px;
+  }
+
+  .tagline {
+    display: none;
   }
 }
