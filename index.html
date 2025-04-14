@@ -1,359 +1,209 @@
-/* Reset & Base Styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dearly Said | Personalized QR Cards</title>
+  <meta name="viewport" content="width=device-width, initial-scale=0.95">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@500&display=swap" rel="stylesheet">
+  <script>
+    function toggleMobileNav() {
+      document.getElementById('mobileNav').classList.toggle('open');
+    }
 
-body {
-  font-family: 'Georgia', serif;
-  background-color: #fdfcfb;
-  color: #444;
-  font-size: 1rem;
-}
+    function closeMobileNav() {
+      document.getElementById('mobileNav').classList.remove('open');
+    }
+  </script>
+</head>
+<body>
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
+  <!-- Mobile Hamburger Toggle -->
+  <button class="mobile-nav-toggle" onclick="toggleMobileNav()">☰</button>
 
-ul {
-  list-style: none;
-}
+  <!-- Mobile Slide-Out Navigation -->
+  <div id="mobileNav" class="mobile-nav">
+    <button class="close-btn" onclick="closeMobileNav()">✕</button>
+    <div class="dropdown">
+      <a href="#">Occasion ▾</a>
+      <div class="dropdown-content">
+        <a href="#">Wedding</a>
+        <a href="#">Anniversary</a>
+        <a href="#">Birthday</a>
+        <a href="#">Memorial/Sympathy</a>
+        <a href="#">Religious</a>
+        <a href="#">New Baby</a>
+        <a href="#">Housewarming</a>
+        <a href="#">Valentine's Day</a>
+        <a href="#">Mother's Day</a>
+        <a href="#">Father's Day</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a href="#">Recipient ▾</a>
+      <div class="dropdown-content">
+        <a href="#">Grandma</a>
+        <a href="#">Grandpa</a>
+        <a href="#">Wedding Couple</a>
+        <a href="#">New Parents</a>
+        <a href="#">Pets</a>
+        <a href="#">Teacher</a>
+        <a href="#">Friends & Family</a>
+        <a href="#">Professional</a>
+        <a href="#">Baby & Kids</a>
+        <a href="#">Mom</a>
+        <a href="#">Dad</a>
+        <a href="#">Child</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a href="#">Product ▾</a>
+      <div class="dropdown-content">
+        <a href="#">Greeting Cards</a>
+        <a href="#">Journals</a>
+        <a href="#">Memory Books</a>
+        <a href="#">Keepsakes</a>
+        <a href="#">Humorous</a>
+      </div>
+    </div>
+  </div>
 
-/* Top Bar */
-.top-bar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 30px;
-  background-color: #fffaf7;
-  border-bottom: 1px solid #eee;
-  z-index: 1000;
-  position: relative;
-}
+  <!-- Top Bar (NO duplicate dropdowns here) -->
+  <div class="top-bar">
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="how-it-works.html">How it Works</a>
+      <a href="contact.html">Contact</a>
+      <a href="faq.html">FAQ</a>
+    </div>
+    <div style="display: flex; gap: 20px;">
+      <div class="cart">🛒 My Cart (0)</div>
+      <div class="account-menu">
+        <span style="cursor:pointer;">My Account ▾</span>
+        <div class="account-dropdown">
+          <a href="#">Sign In</a>
+          <a href="#">New Customer</a>
+          <a href="#">Order Status</a>
+        </div>
+      </div>
+    </div>
+  </div>
 
-.nav-links a {
-  margin-right: 20px;
-  font-weight: bold;
-  color: #b45f45;
-  font-size: 1em;
-}
+  <!-- Header -->
+  <div class="header">
+    <h1>Dearly Said</h1>
+    <div class="subtitle">Forever Kept</div>
+    <div class="mobile-tagline">Turn your words into forever keepsakes with QR-coded cards for love, family, and celebration.</div>
+  </div>
 
-.cart {
-  font-size: 1.1em;
-  font-weight: bold;
-  color: #b45f45;
-}
+  <!-- Sticky Utility Bar -->
+  <div class="sticky-nav">
+    <div class="search-container">
+      <input type="text" placeholder="Find the perfect gift">
+      <span class="search-icon">🔍</span>
+    </div>
+    <div class="tagline">Turn your words into forever keepsakes with QR-coded cards for love, family, and celebration.</div>
+  </div>
 
-/* Header */
-.header {
-  text-align: center;
-  padding: 20px;
-}
+  <!-- Nav Tabs (Dropdowns shown here only on desktop) -->
+  <div class="nav-tabs">
+    <div class="dropdown">
+      <a href="#">Occasion ▾</a>
+      <div class="dropdown-content">
+        <a href="#">Wedding</a>
+        <a href="#">Anniversary</a>
+        <a href="#">Birthday</a>
+        <a href="#">Memorial/Sympathy</a>
+        <a href="#">Religious</a>
+        <a href="#">New Baby</a>
+        <a href="#">Housewarming</a>
+        <a href="#">Valentine's Day</a>
+        <a href="#">Mother's Day</a>
+        <a href="#">Father's Day</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a href="#">Recipient ▾</a>
+      <div class="dropdown-content">
+        <a href="#">Grandma</a>
+        <a href="#">Grandpa</a>
+        <a href="#">Wedding Couple</a>
+        <a href="#">New Parents</a>
+        <a href="#">Pets</a>
+        <a href="#">Teacher</a>
+        <a href="#">Friends & Family</a>
+        <a href="#">Professional</a>
+        <a href="#">Baby & Kids</a>
+        <a href="#">Mom</a>
+        <a href="#">Dad</a>
+        <a href="#">Child</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a href="#">Product ▾</a>
+      <div class="dropdown-content">
+        <a href="#">Greeting Cards</a>
+        <a href="#">Journals</a>
+        <a href="#">Memory Books</a>
+        <a href="#">Keepsakes</a>
+        <a href="#">Humorous</a>
+      </div>
+    </div>
+    <a href="#">Wedding</a>
+    <a href="#">Memorial</a>
+    <a href="#">Baby & Pregnancy</a>
+    <a href="#">Seasonal</a>
+    <a href="#">Birthdays</a>
+    <a href="#">Special Occasions</a>
+    <a href="#">Pets</a>
+    <a href="#">Humorous</a>
+  </div>
 
-.header h1 {
-  font-family: 'Cormorant Upright', serif;
-  font-size: 3em;
-  color: #b45f45;
-}
+  <!-- Banner -->
+  <img src="images/dearly_said_banner.png" class="hero-banner" alt="Dearly Said Banner">
 
-.subtitle {
-  font-family: 'Cormorant Upright', serif;
-  font-size: 1.4em;
-  color: #a5624f;
-  margin-top: 5px;
-}
+  <!-- Category Grid -->
+  <div class="category-row">
+    <div class="category">
+      <img src="images/greeting_cards.jpg" alt="Greeting Cards">
+      <p>Greeting Cards</p>
+    </div>
+    <div class="category">
+      <img src="images/journals.jpg" alt="Journals and Memory Books">
+      <p>Journals & Memory Books</p>
+    </div>
+    <div class="category">
+      <img src="images/keepsakes.jpg" alt="Keepsakes">
+      <p>Keepsakes</p>
+    </div>
+    <div class="category">
+      <img src="images/gifts.jpg" alt="Gifts">
+      <p>Gifts</p>
+    </div>
+  </div>
 
-.mobile-tagline {
-  display: none;
-}
+  <!-- QR Card Info -->
+  <div class="section">
+    <h2>What is a QR Greeting Card?</h2>
+    <p>It’s more than a card — it’s a moment, a memory, and a message you can replay forever. Our beautifully designed greeting cards include scannable QR codes that link to personalized videos or voice notes. Perfect for weddings, birthdays, anniversaries, or just because.</p>
+  </div>
 
-/* Sticky Nav */
-.sticky-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 30px;
-  background-color: #f5eee9;
-  font-size: 0.95em;
-  position: sticky;
-  top: 0;
-  z-index: 998;
-  border-top: 1px solid #eee;
-  border-bottom: 1px solid #eee;
-}
+  <!-- Video -->
+  <div class="section">
+    <h2 style="color:#b45f45;">See a Card in Action</h2>
+    <p>Watch how our QR message cards turn your voice into a cherished keepsake.</p>
+    <video controls>
+      <source src="videos/dearlysaid_intro.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
 
-.search-container {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Dearly Said. All rights reserved.<br>
+    Created with heart and honesty.
+  </footer>
 
-.search-container input {
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-.search-icon {
-  font-size: 1.2em;
-  color: #999;
-}
-
-.tagline {
-  flex: 1;
-  text-align: center;
-  font-style: italic;
-  color: #6d4a3c;
-}
-
-.account-menu {
-  position: relative;
-}
-
-.account-dropdown {
-  display: none;
-  position: absolute;
-  background-color: white;
-  border: 1px solid #ddd;
-  right: 0;
-  border-radius: 4px;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-  z-index: 9999;
-}
-
-.account-dropdown a {
-  display: block;
-  padding: 10px 16px;
-  color: #333;
-}
-
-.account-dropdown a:hover {
-  background-color: #f1f1f1;
-}
-
-.account-menu:hover .account-dropdown {
-  display: block;
-}
-
-/* Nav Tabs & Dropdown */
-.nav-tabs {
-  display: flex;
-  gap: 20px;
-  overflow-x: auto;
-  white-space: nowrap;
-  background-color: #fcf7f4;
-  padding: 12px 20px;
-  border-top: 1px solid #eee;
-  border-bottom: 1px solid #eee;
-  z-index: 1001;
-  position: relative;
-}
-
-.nav-tabs a,
-.nav-tabs .dropdown > a {
-  flex-shrink: 0;
-  color: #b45f45;
-  font-weight: bold;
-  font-size: 0.95em;
-  padding: 8px 12px;
-}
-
-.dropdown {
-  position: relative;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: #fffefc;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  z-index: 9999;
-  min-width: 180px;
-  border: 1px solid #ddd;
-}
-
-.dropdown-content a {
-  display: block;
-  padding: 10px 16px;
-  font-size: 0.95em;
-  color: #b45f45;
-  font-weight: normal;
-}
-
-.dropdown-content a:hover {
-  background-color: #fcf7f4;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-/* Hero Banner */
-.hero-banner {
-  width: 100%;
-  height: 350px;
-  object-fit: cover;
-  display: block;
-}
-
-/* Categories */
-.category-row {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-  padding: 40px 20px;
-  background-color: #fffaf7;
-}
-
-.category {
-  text-align: center;
-  width: 200px;
-}
-
-.category img {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  border-radius: 10px;
-  object-fit: cover;
-  box-shadow: 0 0 6px rgba(0, 0, 0, 0.08);
-}
-
-.category p {
-  margin-top: 10px;
-  font-weight: bold;
-  color: #b45f45;
-}
-
-/* Section */
-.section {
-  text-align: center;
-  padding: 50px 20px;
-}
-
-.section video {
-  max-width: 90%;
-  border-radius: 10px;
-  margin-top: 20px;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  font-size: 0.9em;
-  color: #777;
-  padding: 30px 20px;
-  background-color: #f5eee9;
-}
-
-/* Mobile Styles */
-.mobile-nav-toggle {
-  display: none;
-}
-
-@media (max-width: 768px) {
-  body {
-    font-size: 0.95rem;
-  }
-
-  .top-bar .nav-links {
-    display: none;
-  }
-
-  .mobile-nav-toggle {
-    display: block;
-    font-size: 26px;
-    background: none;
-    border: none;
-    color: #b45f45;
-    margin: 10px 20px;
-    z-index: 1003;
-    position: relative;
-  }
-
-  .mobile-nav {
-    position: fixed;
-    top: 0;
-    left: -100%;
-    width: 75%;
-    height: 100%;
-    background-color: #fffaf7;
-    padding: 30px 20px;
-    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
-    transition: left 0.3s ease-in-out;
-    z-index: 10000;
-  }
-
-  .mobile-nav.open {
-    left: 0;
-  }
-
-  .close-btn {
-    background: none;
-    border: none;
-    font-size: 24px;
-    color: #b45f45;
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    cursor: pointer;
-  }
-
-  .mobile-nav .dropdown {
-    margin-bottom: 20px;
-  }
-
-  .mobile-nav .dropdown a {
-    display: block;
-    font-weight: bold;
-    color: #b45f45;
-    padding: 10px 0;
-    border-bottom: 1px solid #eee;
-  }
-
-  .dropdown-content {
-    position: static;
-    display: none;
-    border: none;
-    box-shadow: none;
-    background-color: transparent;
-    padding-left: 15px;
-  }
-
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
-
-  .mobile-tagline {
-    display: block;
-    font-size: 0.95em;
-    color: #6d4a3c;
-    margin-top: 10px;
-    font-style: italic;
-    padding: 0 15px;
-  }
-
-  .tagline {
-    display: none;
-  }
-}
-
-/* Desktop-specific dropdown z-index fix */
-@media (min-width: 769px) {
-  .nav-tabs {
-    position: relative;
-    z-index: 1000;
-  }
-
-  .dropdown {
-    position: relative;
-  }
-
-  .dropdown-content {
-    z-index: 9999 !important;
-  }
-}
+</body>
+</html>
