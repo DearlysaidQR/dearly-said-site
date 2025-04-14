@@ -1,43 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
   <title>Dearly Said | Personalized QR Cards</title>
-  <link rel="stylesheet" href="styles.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=0.95">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@500&display=swap" rel="stylesheet">
+  <script>
+    function toggleMobileNav() {
+      document.getElementById('mobileNav').classList.toggle('open');
+    }
+
+    function closeMobileNav() {
+      document.getElementById('mobileNav').classList.remove('open');
+    }
+  </script>
 </head>
 <body>
 
+  <!-- Mobile Hamburger Toggle -->
+  <button class="mobile-nav-toggle" onclick="toggleMobileNav()">☰</button>
+
+  <!-- Mobile Slide-Out Navigation -->
+  <div id="mobileNav" class="mobile-nav">
+    <button class="close-btn" onclick="closeMobileNav()">✕</button>
+    <div class="dropdown">
+      <a href="#">Occasion ▾</a>
+      <div class="dropdown-content">
+        <a href="#">Wedding</a>
+        <a href="#">Anniversary</a>
+        <a href="#">Birthday</a>
+        <a href="#">Memorial/Sympathy</a>
+        <a href="#">Religious</a>
+        <a href="#">New Baby</a>
+        <a href="#">Housewarming</a>
+        <a href="#">Valentine's Day</a>
+        <a href="#">Mother's Day</a>
+        <a href="#">Father's Day</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a href="#">Recipient ▾</a>
+      <div class="dropdown-content">
+        <a href="#">Grandma</a>
+        <a href="#">Grandpa</a>
+        <a href="#">Wedding Couple</a>
+        <a href="#">New Parents</a>
+        <a href="#">Pets</a>
+        <a href="#">Teacher</a>
+        <a href="#">Friends & Family</a>
+        <a href="#">Professional</a>
+        <a href="#">Baby & Kids</a>
+        <a href="#">Mom</a>
+        <a href="#">Dad</a>
+        <a href="#">Child</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a href="#">Product ▾</a>
+      <div class="dropdown-content">
+        <a href="#">Greeting Cards</a>
+        <a href="#">Journals</a>
+        <a href="#">Memory Books</a>
+        <a href="#">Keepsakes</a>
+        <a href="#">Humorous</a>
+      </div>
+    </div>
+  </div>
+
   <!-- Top Bar -->
   <div class="top-bar">
-    <div class="header">
-      <h1>Dearly Said</h1>
-      <div class="subtitle">Forever Kept</div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="how-it-works.html">How it Works</a>
+      <a href="contact.html">Contact</a>
+      <a href="faq.html">FAQ</a>
     </div>
-
-    <!-- Mobile-only Controls -->
-    <div class="mobile-top-controls">
-      <button class="mobile-nav-toggle" onclick="toggleMobileNav()">☰</button>
-      <div class="cart">My Cart</div>
-      <div class="account-menu">My Account
+    <div style="display: flex; gap: 20px;">
+      <div class="cart">🛒 My Cart (0)</div>
+      <div class="account-menu">
+        <span style="cursor:pointer; color: #b45f45; font-weight: bold; font-size: 1em;">My Account ▾</span>
         <div class="account-dropdown">
-          <a href="#">Login</a>
-          <a href="#">Register</a>
+          <a href="#">Sign In</a>
+          <a href="#">New Customer</a>
+          <a href="#">Order Status</a>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- Sticky Nav Bar (for desktop and mobile dropdowns) -->
-  <div class="sticky-nav">
-    <div class="tagline">“The voice behind the gift”</div>
-    <div class="search-container">
-      <input type="text" placeholder="Search..." />
-      <span class="search-icon">🔍</span>
-    </div>
+  <!-- Header -->
+  <div class="header">
+    <h1>Dearly Said</h1>
+    <div class="subtitle">Forever Kept</div>
+    <div class="mobile-tagline">Turn your words into forever keepsakes with QR-coded cards for love, family, and celebration.</div>
   </div>
 
-  <!-- Navigation Tabs -->
+  <!-- Sticky Nav -->
+  <div class="sticky-nav">
+    <div class="search-container">
+      <input type="text" placeholder="Find the perfect gift">
+      <span class="search-icon">🔍</span>
+    </div>
+    <div class="tagline">Turn your words into forever keepsakes with QR-coded cards for love, family, and celebration.</div>
+  </div>
+
+  <!-- Nav Tabs -->
   <div class="nav-tabs">
     <div class="dropdown">
       <a href="#">Occasion ▾</a>
@@ -45,101 +114,96 @@
         <a href="#">Wedding</a>
         <a href="#">Anniversary</a>
         <a href="#">Birthday</a>
-        <a href="#">Memorial</a>
-        <a href="#">Baby</a>
+        <a href="#">Memorial/Sympathy</a>
+        <a href="#">Religious</a>
+        <a href="#">New Baby</a>
         <a href="#">Housewarming</a>
-        <a href="#">Religious</a>
+        <a href="#">Valentine's Day</a>
+        <a href="#">Mother's Day</a>
+        <a href="#">Father's Day</a>
       </div>
     </div>
     <div class="dropdown">
       <a href="#">Recipient ▾</a>
       <div class="dropdown-content">
+        <a href="#">Grandma</a>
+        <a href="#">Grandpa</a>
+        <a href="#">Wedding Couple</a>
+        <a href="#">New Parents</a>
+        <a href="#">Pets</a>
+        <a href="#">Teacher</a>
+        <a href="#">Friends & Family</a>
+        <a href="#">Professional</a>
+        <a href="#">Baby & Kids</a>
         <a href="#">Mom</a>
         <a href="#">Dad</a>
-        <a href="#">Grandparent</a>
-        <a href="#">Friend</a>
+        <a href="#">Child</a>
       </div>
     </div>
     <div class="dropdown">
       <a href="#">Product ▾</a>
       <div class="dropdown-content">
-        <a href="#">All Cards</a>
-        <a href="#">Digital</a>
-        <a href="#">Physical</a>
+        <a href="#">Greeting Cards</a>
+        <a href="#">Journals</a>
+        <a href="#">Memory Books</a>
+        <a href="#">Keepsakes</a>
+        <a href="#">Humorous</a>
       </div>
+    </div>
+    <a href="#">Wedding</a>
+    <a href="#">Memorial</a>
+    <a href="#">Baby & Pregnancy</a>
+    <a href="#">Seasonal</a>
+    <a href="#">Birthdays</a>
+    <a href="#">Special Occasions</a>
+    <a href="#">Pets</a>
+    <a href="#">Humorous</a>
+  </div>
+
+  <!-- Banner -->
+  <img src="images/dearly_said_banner.png" class="hero-banner" alt="Dearly Said Banner">
+
+  <!-- Category Grid -->
+  <div class="category-row">
+    <div class="category">
+      <img src="images/greeting_cards.jpg" alt="Greeting Cards">
+      <p>Greeting Cards</p>
+    </div>
+    <div class="category">
+      <img src="images/journals.jpg" alt="Journals and Memory Books">
+      <p>Journals & Memory Books</p>
+    </div>
+    <div class="category">
+      <img src="images/keepsakes.jpg" alt="Keepsakes">
+      <p>Keepsakes</p>
+    </div>
+    <div class="category">
+      <img src="images/gifts.jpg" alt="Gifts">
+      <p>Gifts</p>
     </div>
   </div>
 
-  <!-- Mobile Slide-Out Navigation -->
-  <div id="mobileNav" class="mobile-nav">
-    <button class="close-btn" onclick="toggleMobileNav()">✕</button>
-
-    <div class="dropdown">
-      <a href="#">Occasion ▾</a>
-      <div class="dropdown-content">
-        <a href="#">Wedding</a>
-        <a href="#">Anniversary</a>
-        <a href="#">Birthday</a>
-        <a href="#">Memorial</a>
-        <a href="#">Religious</a>
-      </div>
-    </div>
-
-    <div class="dropdown">
-      <a href="#">Recipient ▾</a>
-      <div class="dropdown-content">
-        <a href="#">Mom</a>
-        <a href="#">Dad</a>
-        <a href="#">Friend</a>
-        <a href="#">Grandparent</a>
-      </div>
-    </div>
-
-    <div class="dropdown">
-      <a href="#">Product ▾</a>
-      <div class="dropdown-content">
-        <a href="#">All Cards</a>
-        <a href="#">Physical Cards</a>
-        <a href="#">Digital Cards</a>
-      </div>
-    </div>
+  <!-- QR Card Info -->
+  <div class="section">
+    <h2>What is a QR Greeting Card?</h2>
+    <p>It’s more than a card — it’s a moment, a memory, and a message you can replay forever. Our beautifully designed greeting cards include scannable QR codes that link to personalized videos or voice notes. Perfect for weddings, birthdays, anniversaries, or just because.</p>
   </div>
 
-  <!-- Hero Banner -->
-  <img src="images/banner.jpg" alt="Hero Banner" class="hero-banner" />
-
-  <!-- Sections go here... -->
+  <!-- Video -->
+  <div class="section">
+    <h2 style="color:#b45f45;">See a Card in Action</h2>
+    <p>Watch how our QR message cards turn your voice into a cherished keepsake.</p>
+    <video controls>
+      <source src="videos/dearlysaid_intro.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Dearly Said. All rights reserved.</p>
+    &copy; 2025 Dearly Said. All rights reserved.<br>
+    Created with heart and honesty.
   </footer>
 
-  <!-- Scripts -->
-  <script>
-    function toggleMobileNav() {
-      document.getElementById("mobileNav").classList.toggle("open");
-    }
-
-    document.querySelectorAll('.mobile-nav .dropdown > a').forEach(link => {
-      link.addEventListener('click', function (e) {
-        e.preventDefault();
-        const dropdown = this.nextElementSibling;
-
-        if (dropdown.style.display === 'block') {
-          dropdown.style.display = 'none';
-          this.innerHTML = this.innerHTML.replace('▴', '▾');
-        } else {
-          document.querySelectorAll('.mobile-nav .dropdown-content').forEach(dc => dc.style.display = 'none');
-          document.querySelectorAll('.mobile-nav .dropdown > a').forEach(a => {
-            a.innerHTML = a.innerHTML.replace('▴', '▾');
-          });
-
-          dropdown.style.display = 'block';
-          this.innerHTML = this.innerHTML.replace('▾', '▴');
-        }
-      });
-    });
-  </script>
 </body>
 </html>
