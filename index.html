@@ -1,69 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Dearly Said | Personalized QR Cards</title>
-  <meta name="viewport" content="width=device-width, initial-scale=0.95">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@500&display=swap" rel="stylesheet">
-  <script>
-    function toggleMobileNav() {
-      document.getElementById('mobileNav').classList.toggle('open');
-    }
-
-    function closeMobileNav() {
-      document.getElementById('mobileNav').classList.remove('open');
-    }
-  </script>
 </head>
 <body>
 
-  <!-- Mobile Hamburger Toggle -->
-  <button class="mobile-nav-toggle" onclick="toggleMobileNav()">☰</button>
+  <!-- Mobile Controls -->
+  <div class="mobile-top-controls">
+    <button class="mobile-nav-toggle" onclick="toggleMobileNav()">☰</button>
+    <div class="cart">My Cart</div>
+    <div class="account-menu">My Account
+      <div class="account-dropdown">
+        <a href="#">Login</a>
+        <a href="#">Register</a>
+      </div>
+    </div>
+  </div>
 
   <!-- Mobile Slide-Out Navigation -->
   <div id="mobileNav" class="mobile-nav">
-    <button class="close-btn" onclick="closeMobileNav()">✕</button>
+    <button class="close-btn" onclick="toggleMobileNav()">✕</button>
+
     <div class="dropdown">
-      <a href="#">Occasion ▾</a>
+      <a href="#" onclick="toggleDropdown(event)">Occasion ▾</a>
       <div class="dropdown-content">
         <a href="#">Wedding</a>
         <a href="#">Anniversary</a>
         <a href="#">Birthday</a>
         <a href="#">Memorial/Sympathy</a>
-        <a href="#">Religious</a>
-        <a href="#">New Baby</a>
-        <a href="#">Housewarming</a>
-        <a href="#">Valentine's Day</a>
-        <a href="#">Mother's Day</a>
-        <a href="#">Father's Day</a>
       </div>
     </div>
     <div class="dropdown">
-      <a href="#">Recipient ▾</a>
+      <a href="#" onclick="toggleDropdown(event)">Recipient ▾</a>
       <div class="dropdown-content">
-        <a href="#">Grandma</a>
-        <a href="#">Grandpa</a>
-        <a href="#">Wedding Couple</a>
-        <a href="#">New Parents</a>
-        <a href="#">Pets</a>
-        <a href="#">Teacher</a>
-        <a href="#">Friends & Family</a>
-        <a href="#">Professional</a>
-        <a href="#">Baby & Kids</a>
         <a href="#">Mom</a>
         <a href="#">Dad</a>
-        <a href="#">Child</a>
+        <a href="#">Friend</a>
       </div>
     </div>
     <div class="dropdown">
-      <a href="#">Product ▾</a>
+      <a href="#" onclick="toggleDropdown(event)">Product ▾</a>
       <div class="dropdown-content">
         <a href="#">Greeting Cards</a>
         <a href="#">Journals</a>
-        <a href="#">Memory Books</a>
         <a href="#">Keepsakes</a>
-        <a href="#">Humorous</a>
       </div>
     </div>
   </div>
@@ -115,29 +99,14 @@
         <a href="#">Anniversary</a>
         <a href="#">Birthday</a>
         <a href="#">Memorial/Sympathy</a>
-        <a href="#">Religious</a>
-        <a href="#">New Baby</a>
-        <a href="#">Housewarming</a>
-        <a href="#">Valentine's Day</a>
-        <a href="#">Mother's Day</a>
-        <a href="#">Father's Day</a>
       </div>
     </div>
     <div class="dropdown">
       <a href="#">Recipient ▾</a>
       <div class="dropdown-content">
-        <a href="#">Grandma</a>
-        <a href="#">Grandpa</a>
-        <a href="#">Wedding Couple</a>
-        <a href="#">New Parents</a>
-        <a href="#">Pets</a>
-        <a href="#">Teacher</a>
-        <a href="#">Friends & Family</a>
-        <a href="#">Professional</a>
-        <a href="#">Baby & Kids</a>
         <a href="#">Mom</a>
         <a href="#">Dad</a>
-        <a href="#">Child</a>
+        <a href="#">Friend</a>
       </div>
     </div>
     <div class="dropdown">
@@ -145,19 +114,9 @@
       <div class="dropdown-content">
         <a href="#">Greeting Cards</a>
         <a href="#">Journals</a>
-        <a href="#">Memory Books</a>
         <a href="#">Keepsakes</a>
-        <a href="#">Humorous</a>
       </div>
     </div>
-    <a href="#">Wedding</a>
-    <a href="#">Memorial</a>
-    <a href="#">Baby & Pregnancy</a>
-    <a href="#">Seasonal</a>
-    <a href="#">Birthdays</a>
-    <a href="#">Special Occasions</a>
-    <a href="#">Pets</a>
-    <a href="#">Humorous</a>
   </div>
 
   <!-- Banner -->
@@ -204,6 +163,32 @@
     &copy; 2025 Dearly Said. All rights reserved.<br>
     Created with heart and honesty.
   </footer>
+
+  <!-- JavaScript -->
+  <script>
+    function toggleMobileNav() {
+      document.getElementById("mobileNav").classList.toggle("open");
+    }
+
+    function toggleDropdown(e) {
+      e.preventDefault();
+      const parent = e.target.parentElement;
+      const content = parent.querySelector(".dropdown-content");
+      const isOpen = parent.classList.contains("open");
+
+      document.querySelectorAll(".mobile-nav .dropdown").forEach(d => {
+        d.classList.remove("open");
+        d.querySelector("a").innerHTML = d.querySelector("a").innerHTML.replace("▴", "▾");
+      });
+
+      if (!isOpen) {
+        parent.classList.add("open");
+        e.target.innerHTML = e.target.innerHTML.replace("▾", "▴");
+      } else {
+        e.target.innerHTML = e.target.innerHTML.replace("▴", "▾");
+      }
+    }
+  </script>
 
 </body>
 </html>
